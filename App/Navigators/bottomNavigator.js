@@ -2,26 +2,21 @@ import * as React from "react";
 import { Text, View } from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { ObserverScreen, AttackerScreen } from "./NavigationScreenss";
-import homeNavigator from "../StackNavigator/homeNavigator";
-import strategyNavigator from "../StackNavigator/strategyNavigator";
+import StrategyStackNavigator from "./strategyStackNavigator";
+import RootNavigator from "./rootStackNavigator";
 
 import { InformationScreen } from "../Screens/InformationScreen";
-import { VictimScreen } from "../Screens/VictimScreen";
-import { HomeScreen } from "../Screens/HomeScreen";
+import { ObserverScreen } from "../Screens/ObserverScreen";
+import { AttackerScreen } from "../Screens/AttackerScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 
-export default function NavigationTabs() {
+export default function BottomNavigator() {
   return (
-    <Tab.Navigator
-      // initialRouteName="StackNavigator"
-      activeColor="tomato"
-      barStyle={{ backgroundColor: "white" }}
-    >
+    <Tab.Navigator activeColor="tomato" barStyle={{ backgroundColor: "white" }}>
       <Tab.Screen
         name="Home"
-        component={homeNavigator}
+        component={RootNavigator}
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ color }) => (
@@ -31,7 +26,7 @@ export default function NavigationTabs() {
       />
       <Tab.Screen
         name="Victim"
-        component={strategyNavigator}
+        component={StrategyStackNavigator}
         options={{
           tabBarLabel: "Victim",
           tabBarIcon: ({ color }) => (

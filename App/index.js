@@ -3,12 +3,12 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { StyleSheet, Text, View } from "react-native";
-import NavigationTabs from "./BottomNavigator/NavigationTabs";
+import BottomNavigator from "./Navigators/bottomNavigator";
 
 export default function App() {
   return (
     <NavigationContainer>
-      <NavigationTabs />
+      <BottomNavigator />
     </NavigationContainer>
   );
 }
