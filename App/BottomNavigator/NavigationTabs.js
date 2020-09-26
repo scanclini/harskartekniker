@@ -3,7 +3,8 @@ import { Text, View } from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { ObserverScreen, AttackerScreen } from "./NavigationScreenss";
-import StackNavigator from "../StackNavigator";
+import homeNavigator from "../StackNavigator/homeNavigator";
+import strategyNavigator from "../StackNavigator/strategyNavigator";
 
 import { InformationScreen } from "../Screens/InformationScreen";
 import { VictimScreen } from "../Screens/VictimScreen";
@@ -14,14 +15,13 @@ const Tab = createMaterialBottomTabNavigator();
 export default function NavigationTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="StackNavigator"
+      // initialRouteName="StackNavigator"
       activeColor="tomato"
       barStyle={{ backgroundColor: "white" }}
     >
-      {/* <Tab.Screen name="Root" component={StackNavigator} /> */}
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={homeNavigator}
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ color }) => (
@@ -31,7 +31,7 @@ export default function NavigationTabs() {
       />
       <Tab.Screen
         name="Victim"
-        component={VictimScreen}
+        component={strategyNavigator}
         options={{
           tabBarLabel: "Victim",
           tabBarIcon: ({ color }) => (

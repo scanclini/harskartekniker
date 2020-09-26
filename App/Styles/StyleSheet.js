@@ -33,14 +33,6 @@ export const cardStyles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "space-around",
   },
-  touchable: {
-    width: "100%",
-    // marginTop: 20,
-    // flexDirection: "row",
-    // width: "100%",
-    // flexWrap: "wrap",
-    // justifyContent: "space-around",
-  },
   cardStyle: {
     width: "48%",
     justifyContent: "center",
@@ -65,11 +57,11 @@ export const cardStyles = StyleSheet.create({
   },
 });
 
-export const strategyStyles = StyleSheet.create({
-  strategyContainer: {
+export const scenarioStyles = StyleSheet.create({
+  scenarioContainer: {
     alignItems: "center",
   },
-  strategyItem: {
+  scenarioItem: {
     width: "100%",
     height: 80,
     justifyContent: "center",

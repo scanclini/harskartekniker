@@ -1,15 +1,36 @@
 import React from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import { Card } from "react-native-elements";
 import {
   screenStyles,
-  strategyStyles,
+  scenarioStyles,
   textStyles,
 } from "../../Styles/StyleSheet";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { strategyList } from "./strategies";
+import { scenarios } from "./scenarios";
 
-export function VictimScreen() {
+export function VictimScreen({ navigation }) {
+  const scenarioList = scenarios.map((scenario) => {
+    return (
+      <Card
+        key={`scenario-${scenario.id}`}
+        containerStyle={scenarioStyles.scenarioItem}
+      >
+        <TouchableOpacity
+          onPress={() => navigation.navigate(scenario.strategy)}
+        >
+          <Text>{scenario.value}</Text>
+        </TouchableOpacity>
+      </Card>
+    );
+  });
+
   return (
     <ScrollView>
       <View style={screenStyles.screenContainer}>
@@ -23,7 +44,7 @@ export function VictimScreen() {
           du varit med om.
         </Text>
         <Text style={screenStyles.baseText}>Vad hände?</Text>
-        <View style={strategyStyles.strategyContainer}>{strategyList}</View>
+        <View style={scenarioStyles.scenarioContainer}>{scenarioList}</View>
       </View>
     </ScrollView>
   );
