@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import StrategyStackNavigator from "./strategyStackNavigator";
+import ObserverStackNavigator from "./observerStackNavigator";
 import RootNavigator from "./rootStackNavigator";
 
 import { InformationScreen } from "../Screens/InformationScreen";
@@ -28,7 +29,8 @@ export default function BottomNavigator() {
         name="Victim"
         component={StrategyStackNavigator}
         options={{
-          tabBarLabel: "Victim",
+          tabBarLabel: "Jag har blivit utsatt",
+          allowFontScaling: true,
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="hand-left" color={color} size={26} />
           ),
@@ -36,9 +38,9 @@ export default function BottomNavigator() {
       />
       <Tab.Screen
         name="Observer"
-        component={ObserverScreen}
+        component={ObserverStackNavigator}
         options={{
-          tabBarLabel: "Observer",
+          tabBarLabel: "Jag har sett något",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="eye" color={color} size={26} />
           ),

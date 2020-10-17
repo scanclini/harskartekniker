@@ -13,7 +13,7 @@ export function AttackerScreen() {
         </Text>
         <Text style={textStyles.subtitleText}>Vad gör jag nu?</Text>
         <Text style={textStyles.baseText}>
-          Här får ru tips på vad du kan göra om har blivit utsatt för en
+          Här får du tips på vad du kan göra om har blivit utsatt för en
           härskarteknik. Välj den sitation i listan som stämmer bäst in på det
           du varit med om.
         </Text>
