@@ -1,6 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
-import { Card, Image, Button, Icon } from "react-native-elements";
+import { Text, View, ScrollView } from "react-native";
 import { screenStyles, cardStyles, textStyles } from "../../Styles/StyleSheet";
 import { techniquesList } from "./masterSuppressionTechniques";
 

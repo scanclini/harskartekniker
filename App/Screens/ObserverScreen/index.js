@@ -6,47 +6,27 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import { Card, Image, Button, Icon } from "react-native-elements";
-import {
-  screenStyles,
-  cardStyles,
-  textStyles,
-  scenarioStyles,
-} from "../../Styles/StyleSheet";
+import { screenStyles, textStyles } from "../../Styles/StyleSheet";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { observations } from "./observations";
+import { ItemList } from "../shared/itemList";
 
 export function ObserverScreen({ navigation }) {
-  const observationList = observations.map((observation) => {
-    return (
-      <Card
-        key={`observation-${observation.id}`}
-        containerStyle={scenarioStyles.scenarioItem}
-      >
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate(observation.strategy);
-          }}
-        >
-          <Text>{observation.value}</Text>
-        </TouchableOpacity>
-      </Card>
-    );
-  });
-
+  const { screenContainer } = screenStyles;
+  const { titleText, subtitleText, baseText } = textStyles;
   return (
     <ScrollView>
-      <View style={screenStyles.screenContainer}>
-        <Text style={textStyles.titleText}>
+      <View style={screenContainer}>
+        <Text style={titleText}>
           <MaterialCommunityIcons name="eye" size={50} />
         </Text>
-        <Text style={textStyles.subtitleText}>Bekräftartekniker</Text>
-        <Text style={textStyles.baseText}>
+        <Text style={subtitleText}>Bekräftartekniker</Text>
+        <Text style={baseText}>
           Har du sett någon bli utsatt för en härskarteknik? Välj passande
           situation från listan för att få tips på hur du kan ge personen stöd.
         </Text>
-        <View style={scenarioStyles.scenarioContainer}>{observationList}</View>
       </View>
+      <ItemList items={observations} />
     </ScrollView>
   );
 }

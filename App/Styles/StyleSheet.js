@@ -58,9 +58,6 @@ export const cardStyles = StyleSheet.create({
 });
 
 export const scenarioStyles = StyleSheet.create({
-  scenarioContainer: {
-    alignItems: "center",
-  },
   scenarioItem: {
     width: "100%",
     height: 80,

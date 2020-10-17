@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, View, ScrollView } from "react-native";
+import { Text, View, ScrollView, Image } from "react-native";
+import Osynliggorande from "../../../assets/strategies/victim/milla_osynliggorande.jpg";
 
 export function TakePlaceScreen() {
   return (
@@ -14,6 +15,8 @@ export function TakePlaceScreen() {
           Min erfarenhet är att…'
         </Text>
       </View>
+      <Image source={Osynliggorande} />
+      <Text>Illustration av osynliggörande. Bild av Milla Lepistö.</Text>
     </ScrollView>
   );
 }

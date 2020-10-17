@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, View, ScrollView } from "react-native";
+import { Text, View, ScrollView, Image } from "react-native";
+import Undanhallande from "../../../assets/strategies/observer/milla_undanhallande.jpg";
 
 export function DemandTransparencyScreen() {
   return (
@@ -18,6 +19,8 @@ export function DemandTransparencyScreen() {
           information och att delta i beslut.
         </Text>
       </View>
+      <Image source={Undanhallande} />
+      <Text>Illustration av undanhållande. Bild av Milla Lepistö.</Text>
     </ScrollView>
   );
 }

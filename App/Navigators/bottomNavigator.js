@@ -9,6 +9,7 @@ import RootNavigator from "./rootStackNavigator";
 import { InformationScreen } from "../Screens/InformationScreen";
 import { ObserverScreen } from "../Screens/ObserverScreen";
 import { AttackerScreen } from "../Screens/AttackerScreen";
+import { HomeScreen } from "../Screens/HomeScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -17,9 +18,8 @@ export default function BottomNavigator() {
     <Tab.Navigator activeColor="tomato" barStyle={{ backgroundColor: "white" }}>
       <Tab.Screen
         name="Home"
-        component={RootNavigator}
+        component={HomeScreen}
         options={{
-          tabBarLabel: "Home",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
