@@ -1,67 +1,53 @@
 import React from "react";
-import { Card } from "react-native-elements";
+import { Card, Text, View } from "react-native-elements";
 import { screenStyles, cardStyles, textStyles } from "../../Styles/StyleSheet";
 
 const techniques = [
   {
     id: 1,
-    illustration: {
-      uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    },
-    name: "Osynliggäörande",
+    illustration: require("../../../assets/milla_osynliggorande.jpg"),
+    name: "Osynliggörande",
   },
   {
     id: 2,
-    illustration: {
-      uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    },
+    illustration: require("../../../assets/milla_forlojligande.jpg"),
     name: "Förlöjligande",
   },
   {
     id: 3,
-    illustration: {
-      uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    },
+    illustration: require("../../../assets/milla_undanhallande.jpg"),
     name: "Undanhållande av information",
   },
   {
     id: 4,
-    illustration: {
-      uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    },
+    illustration: require("../../../assets/milla_dubbelbestraffning.jpg"),
     name: "Dubbelbestraffning",
   },
   {
     id: 5,
-    illustration: {
-      uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    },
+    illustration: require("../../../assets/milla_skuldoskam.jpg"),
     name: "Påförande av skuld och skam",
   },
   {
     id: 6,
-    illustration: {
-      uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    },
+    illustration: require("../../../assets/milla_objektifiering.jpg"),
     name: "Objektifiering",
   },
   {
     id: 7,
-    illustration: {
-      uri: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg",
-    },
+    illustration: require("../../../assets/milla_hot.jpg"),
     name: "Våld, hot om våld",
   },
 ];
 
-export const techniquesList = techniques.map((technique) => {
-  return (
-    <Card
-      key={`technique-${technique.id}`}
-      containerStyle={cardStyles.cardStyle}
-    >
-      <Card.Image source={technique.illustration}></Card.Image>
-      <Card.Title style={cardStyles.titleStyle}>{technique.name}</Card.Title>
-    </Card>
-  );
-});
+export const TechniquesList = () => {
+  return techniques.map((technique) => {
+    const { id, illustration, name } = technique;
+    return (
+      <Card key={id} containerStyle={cardStyles.card}>
+        <Card.Image style={cardStyles.image} source={illustration} />
+        <Card.Title style={cardStyles.title}>{name}</Card.Title>
+      </Card>
+    );
+  });
+};

@@ -26,14 +26,18 @@ export const textStyles = StyleSheet.create({
 });
 
 export const cardStyles = StyleSheet.create({
+  container: {
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
   cardsContainer: {
+    width: "100%",
     marginTop: 20,
     flexDirection: "row",
-    width: "100%",
     flexWrap: "wrap",
-    justifyContent: "space-around",
+    justifyContent: "flex-start",
   },
-  cardStyle: {
+  card: {
     width: "48%",
     justifyContent: "center",
     alignItems: "center",
@@ -41,26 +45,40 @@ export const cardStyles = StyleSheet.create({
     minHeight: 150,
     borderRadius: 10,
     marginBottom: 0,
-    marginLeft: 0,
-    marginRight: 0,
-    marginTop: 5,
+    marginLeft: 3,
+    marginRight: 3,
+    marginTop: 6,
   },
-  iconStyle: {
+  icon: {
     marginLeft: "auto",
     marginRight: "auto",
     marginBottom: 10,
     marginTop: 10,
   },
-  titleStyle: {
+  title: {
     fontSize: 15,
     textAlign: "center",
+  },
+  image: {
+    marginTop: 20,
+    marginLeft: "auto",
+    marginRight: "auto",
+    borderTopRightRadius: 15,
+    borderTopLeftRadius: 15,
   },
 });
 
 export const scenarioStyles = StyleSheet.create({
-  scenarioItem: {
+  container: {
     width: "100%",
-    height: 80,
+  },
+  item: {
+    borderRadius: 10,
+    height: 100,
+    marginLeft: 8,
+    marginRight: 8,
+    marginBottom: 4,
+    marginTop: 4,
     justifyContent: "center",
   },
   titleStyle: {

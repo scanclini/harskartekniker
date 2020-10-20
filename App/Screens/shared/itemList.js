@@ -4,10 +4,9 @@ import { Card } from "react-native-elements";
 import { scenarioStyles } from "../../Styles/StyleSheet";
 
 export const ItemList = ({ items }) => {
-  const { scenarioItem: item } = scenarioStyles;
-  return items.map((item) => {
+  const itemList = items.map((item) => {
     return (
-      <Card key={`${item.id}`} containerStyle={item}>
+      <Card key={`${item.id}`} containerStyle={scenarioStyles.item}>
         <TouchableOpacity
           onPress={() => {
             navigation.navigate(item.strategy);
@@ -18,4 +17,5 @@ export const ItemList = ({ items }) => {
       </Card>
     );
   });
+  return <View style={scenarioStyles.container}>{itemList}</View>;
 };

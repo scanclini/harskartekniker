@@ -11,23 +11,24 @@ import { Image, Card } from "react-native-elements";
 import { screenStyles, cardStyles, textStyles } from "../../Styles/StyleSheet";
 import { sections } from "./sections";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-
+import { ItemList } from "./sections";
 const ICON_SIZE = 25;
 
 export function HomeScreen({ navigation }) {
   const sectionsList = sections.map((section) => {
+    const { id, path, title, icon } = section;
     return (
-      <Card key={`section-${section.id}`} containerStyle={cardStyles.cardStyle}>
+      <Card key={id} containerStyle={cardStyles.card}>
         <TouchableOpacity
-          onPress={() => navigation.navigate(section.path)}
+          onPress={() => navigation.navigate(path)}
           containerStyle={cardStyles.touchable}
         >
           <MaterialCommunityIcons
-            name={section.icon}
+            name={icon}
             size={ICON_SIZE}
-            style={cardStyles.iconStyle}
+            style={cardStyles.icon}
           />
-          <Text style={cardStyles.titleStyle}>{section.title}</Text>
+          <Text style={cardStyles.title}>{title}</Text>
         </TouchableOpacity>
       </Card>
     );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, ScrollView, Image } from "react-native";
-import Undanhallande from "../../../assets/strategies/observer/milla_undanhallande.jpg";
+import Undanhallande from "../../../assets/milla_undanhallande.jpg";
 
 export function DemandTransparencyScreen() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, ScrollView, Image } from "react-native";
-import Osynliggorande from "../../../assets/strategies/victim/milla_osynliggorande.jpg";
+import Osynliggorande from "../../../assets/milla_osynliggorande.jpg";
 
 export function TakePlaceScreen() {
   return (
