@@ -1,40 +1,43 @@
 import * as React from "react";
 import { Text, View } from "react-native";
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import VictimStackNavigator from "../Screens/VictimScreen/victimStackNavigator";
 import ObserverStackNavigator from "../Screens/ObserverScreen/observerStackNavigator";
 import RootNavigator from "./rootStackNavigator";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
 import { InformationScreen } from "../Screens/InformationScreen";
 import { ObserverScreen } from "../Screens/ObserverScreen";
 import { AttackerScreen } from "../Screens/AttackerScreen";
 import { HomeScreen } from "../Screens/HomeScreen";
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function BottomNavigator() {
   return (
-    <Tab.Navigator activeColor="tomato" barStyle={{ backgroundColor: "white" }}>
+    <Tab.Navigator
+      barStyle={{ backgroundColor: "white" }}
+      tabBarOptions={{ activeTintColor: "#ff6347" }}
+    >
       <Tab.Screen
         name="Home"
         component={HomeScreen}
-        options={{
+        options={({ route }) => ({
+          tabBarVisible: false,
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
-        }}
+        })}
       />
       <Tab.Screen
         name="Victim"
         component={VictimStackNavigator}
-        options={{
-          tabBarLabel: "Jag har blivit utsatt",
-          allowFontScaling: true,
+        options={({ route }) => ({
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="hand-left" color={color} size={26} />
           ),
-        }}
+        })}
       />
       <Tab.Screen
         name="Observer"
