@@ -2,10 +2,10 @@ import React from "react";
 import { Text, View, ScrollView } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { screenStyles, textStyles } from "../../Styles/StyleSheet";
-import { ItemList } from "../shared/itemList";
+import { ItemList } from "../_shared/itemList";
 import { harrassments } from "./harrassments";
 
-export function AttackerScreen() {
+export function AttackerScreen({ navigation }) {
   const { screenContainer } = screenStyles;
   const { titleText, subtitleText, baseText } = textStyles;
   return (
@@ -21,7 +21,7 @@ export function AttackerScreen() {
           du varit med om.
         </Text>
       </View>
-      <ItemList items={harrassments} />
+      <ItemList items={harrassments} navigation={navigation} />
     </ScrollView>
   );
 }

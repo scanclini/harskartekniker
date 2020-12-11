@@ -9,7 +9,7 @@ import {
 import { screenStyles, textStyles } from "../../Styles/StyleSheet";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { observations } from "./observations";
-import { ItemList } from "../shared/itemList";
+import { ItemList } from "../_shared/itemList";
 
 export function ObserverScreen({ navigation }) {
   const { screenContainer } = screenStyles;
@@ -26,7 +26,7 @@ export function ObserverScreen({ navigation }) {
           situation från listan för att få tips på hur du kan ge personen stöd.
         </Text>
       </View>
-      <ItemList items={observations} />
+      <ItemList items={observations} navigation={navigation} />
     </ScrollView>
   );
 }

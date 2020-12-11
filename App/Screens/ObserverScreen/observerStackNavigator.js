@@ -1,8 +1,8 @@
 import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { ObserverScreen } from "../Screens/ObserverScreen";
-import { DemandTransparencyScreen } from "../Screens/ObserverScreen/strategies";
+import { ObserverScreen } from "./";
+import { DemandTransparencyScreen } from "./counterStrategies";
 
 const Stack = createStackNavigator();
 

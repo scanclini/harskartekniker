@@ -1,8 +1,8 @@
 import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import StrategyStackNavigator from "./strategyStackNavigator";
-import ObserverStackNavigator from "./observerStackNavigator";
+import VictimStackNavigator from "../Screens/VictimScreen/victimStackNavigator";
+import ObserverStackNavigator from "../Screens/ObserverScreen/observerStackNavigator";
 
 import { InformationScreen } from "../Screens/InformationScreen";
 import { HomeScreen } from "../Screens/HomeScreen";
@@ -14,7 +14,7 @@ export default function StackNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Victim" component={StrategyStackNavigator} />
+      <Stack.Screen name="Victim" component={VictimStackNavigator} />
       <Stack.Screen name="Information" component={InformationScreen} />
       <Stack.Screen name="Observer" component={ObserverStackNavigator} />
       <Stack.Screen name="Attacker" component={AttackerScreen} />

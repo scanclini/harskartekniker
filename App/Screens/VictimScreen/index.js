@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { screenStyles, textStyles } from "../../Styles/StyleSheet";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { scenarios } from "./scenarios";
-import { ItemList } from "../shared/itemList";
+import { ItemList } from "../_shared/itemList";
 
 export function VictimScreen({ navigation }) {
   const { screenContainer } = screenStyles;
@@ -22,7 +22,7 @@ export function VictimScreen({ navigation }) {
         </Text>
         <Text style={baseText}>Vad hände?</Text>
       </View>
-      <ItemList items={scenarios} />
+      <ItemList items={scenarios} navigation={navigation} />
     </ScrollView>
   );
 }
