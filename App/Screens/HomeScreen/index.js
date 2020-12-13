@@ -2,17 +2,35 @@ import React from "react";
 import {
   Text,
   View,
+  Image,
   StyleSheet,
   ScrollView,
   Button,
   TouchableOpacity,
 } from "react-native";
-import { Image, Card } from "react-native-elements";
-import { screenStyles, cardStyles, textStyles } from "../../Styles/StyleSheet";
+import { Card } from "react-native-elements";
+import {
+  screenStyles,
+  cardStyles,
+  textStyles,
+  sectionStyles,
+  assetStyles,
+} from "../../Styles/StyleSheet";
 import { sections } from "./sections";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { ItemList } from "./sections";
 const ICON_SIZE = 25;
+import MiunLogo from "../../../assets/miun_logo.png";
+
+const MiunHeader = () => (
+  <Card containerStyle={cardStyles.header}>
+    <Image style={assetStyles.logo} source={MiunLogo} />
+    <Text style={textStyles.headerText}>
+      Appen är utvecklad av Forum för genusvetenskap i samarbete med Forum för
+      digitalisering och institutionen för design.
+    </Text>
+  </Card>
+);
 
 export function HomeScreen({ navigation }) {
   const sectionsList = sections.map((section) => {
@@ -35,13 +53,16 @@ export function HomeScreen({ navigation }) {
   });
 
   return (
-    <ScrollView>
-      <View style={screenStyles.screenContainer}>
-        <Text style={textStyles.titleText}>Power up</Text>
-        <Text style={textStyles.baseText}>
-          En app som hjälper dig att uppmärksamma och motverka sju vanliga
-          härskartekniker
-        </Text>
+    <ScrollView style={screenStyles.background}>
+      <MiunHeader />
+      <View style={screenStyles.firstScreenContainer}>
+        <View style={sectionStyles.textContainer}>
+          <Text style={textStyles.titleText}>Power up</Text>
+          <Text style={textStyles.baseText}>
+            En app som hjälper dig att uppmärksamma och motverka sju vanliga
+            härskartekniker
+          </Text>
+        </View>
         <View style={cardStyles.cardsContainer}>{sectionsList}</View>
       </View>
     </ScrollView>

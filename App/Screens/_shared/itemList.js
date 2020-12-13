@@ -5,6 +5,7 @@ import { scenarioStyles } from "../../Styles/StyleSheet";
 
 export const ItemList = ({ items, navigation }) => {
   const itemList = items.map((item) => {
+    console.log("COLOR", item.color);
     return (
       <TouchableOpacity
         key={`${item.id}`}
@@ -12,7 +13,12 @@ export const ItemList = ({ items, navigation }) => {
           navigation.navigate(item.counterStrategy);
         }}
       >
-        <Card containerStyle={scenarioStyles.item}>
+        <Card
+          containerStyle={{
+            ...scenarioStyles.item,
+            borderLeftColor: item.color,
+          }}
+        >
           <Text>{item.value}</Text>
         </Card>
       </TouchableOpacity>
