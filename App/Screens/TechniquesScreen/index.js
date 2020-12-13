@@ -4,20 +4,18 @@ import { screenStyles, cardStyles, textStyles } from "../../Styles/StyleSheet";
 import { TechniquesList } from "./masterSuppressionTechniques";
 
 export function TechniquesScreen({ navigation }) {
+  const { screenContainer } = screenStyles;
+  const { h1, h3, p } = textStyles;
+
   return (
     <ScrollView>
-      <View style={screenStyles.screenContainer}>
-        <Text style={textStyles.titleText}>i</Text>
-        <Text style={textStyles.subtitleText}>Vad är härskartekniker?</Text>
-        <Text style={textStyles.baseText}>
+      <View style={screenContainer}>
+        <Text style={h1}>i</Text>
+        <Text style={h3}>Vad är härskartekniker?</Text>
+        <Text style={p}>
           Härskartekniker ärolika maktprocesser som används för att utöva
           negativ makt över andra. Idag talas det ofta om sju härskartekniker:
         </Text>
-        {/* <View style={{ ...cardStyles.techiques }}>
-          <View style={cardStyles.cardsContainer}>
-            <TechniquesList navigation={navigation} />
-          </View>
-        </View> */}
         <View style={cardStyles.cardsContainer}>
           <TechniquesList navigation={navigation} />
         </View>

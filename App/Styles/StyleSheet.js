@@ -14,11 +14,19 @@ export const techniqueColors = {
   undanhallande: "#fced8e",
 };
 
+export const icons = {
+  attackerIcon: "bell",
+  victimIcon: "hand-left",
+  homeIcon: "home",
+  observerIcon: "eye",
+  techniquesIcon: "information-variant",
+};
+
 export const screenStyles = StyleSheet.create({
   screenContainer: {
     marginLeft: "10%",
     marginRight: "10%",
-    marginTop: "50%",
+    marginTop: 75,
   },
   firstScreenContainer: {
     marginLeft: "10%",
@@ -33,6 +41,12 @@ export const sectionStyles = StyleSheet.create({
     marginLeft: "10%",
     marginRight: "10%",
   },
+  listContainer: {
+    marginTop: 10,
+    marginBottom: 10,
+    marginLeft: "6%",
+    marginRight: "6%",
+  },
 });
 
 export const assetStyles = StyleSheet.create({
@@ -44,23 +58,26 @@ export const assetStyles = StyleSheet.create({
 });
 
 export const textStyles = StyleSheet.create({
-  baseText: {
+  p: {
     ...Platform.select({
       ios: { fontFamily: IOS_FONT },
       android: { fontFamily: ANDROID_FONT },
     }),
     fontSize: 17,
+    marginBottom: 20,
   },
-  subtitleText: {
+  h3: {
     fontSize: 20,
     ...Platform.select({
       ios: { fontFamily: IOS_FONT },
       android: { fontFamily: ANDROID_FONT },
     }),
     fontWeight: "bold",
+    marginBottom: 20,
   },
-  titleText: {
-    textAlign: "justify",
+  h1: {
+    marginLeft: "auto",
+    marginRight: "auto",
     ...Platform.select({
       ios: { fontFamily: IOS_FONT },
       android: { fontFamily: ANDROID_FONT },

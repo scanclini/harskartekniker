@@ -1,17 +1,24 @@
 import * as React from "react";
-import { Text, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { icons } from "../Styles/StyleSheet";
+
+import HomeScreen from "../Screens/HomeScreen";
+
 import VictimStackNavigator from "../Screens/VictimScreen/victimStackNavigator";
 import ObserverStackNavigator from "../Screens/ObserverScreen/observerStackNavigator";
 import AttackerStackNavigator from "../Screens/AttackerScreen/attackerStackNavigator";
 import TechniquesStackNavigator from "../Screens/TechniquesScreen/stackNavigator";
-import RootNavigator from "./rootStackNavigator";
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
-import { ObserverScreen } from "../Screens/ObserverScreen";
-import { AttackerScreen } from "../Screens/AttackerScreen";
-import HomeScreen from "../Screens/HomeScreen";
+import RootNavigator from "./rootStackNavigator";
+
+const {
+  attackerIcon,
+  victimIcon,
+  homeIcon,
+  observerIcon,
+  techniquesIcon,
+} = icons;
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +34,7 @@ export default function BottomNavigator() {
         options={({ route }) => ({
           tabBarVisible: false,
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
+            <MaterialCommunityIcons name={homeIcon} color={color} size={26} />
           ),
         })}
       />
@@ -36,7 +43,7 @@ export default function BottomNavigator() {
         component={VictimStackNavigator}
         options={({ route }) => ({
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="hand-left" color={color} size={26} />
+            <MaterialCommunityIcons name={victimIcon} color={color} size={26} />
           ),
         })}
       />
@@ -46,7 +53,11 @@ export default function BottomNavigator() {
         options={{
           tabBarLabel: "Jag har sett något",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="eye" color={color} size={26} />
+            <MaterialCommunityIcons
+              name={observerIcon}
+              color={color}
+              size={26}
+            />
           ),
         }}
       />
@@ -56,7 +67,11 @@ export default function BottomNavigator() {
         options={{
           tabBarLabel: "Attacker",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={26} />
+            <MaterialCommunityIcons
+              name={attackerIcon}
+              color={color}
+              size={26}
+            />
           ),
         }}
       />
@@ -67,7 +82,7 @@ export default function BottomNavigator() {
           tabBarLabel: "Information",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
-              name="information-variant"
+              name={techniquesIcon}
               color={color}
               size={26}
             />
