@@ -4,18 +4,10 @@ import { StyleSheet } from "react-native";
 const IOS_FONT = "Arial";
 const ANDROID_FONT = "Roboto";
 
-export const dubbelBestraffning = "#000000";
-export const forlojligande = "#000000";
-export const hot = "#000000";
-export const objektifiering = "#000000";
-export const osynliggorande = "#000000";
-export const skuldSkam = "#000000";
-export const undanhallande = "#000000";
-
 export const techniqueColors = {
-  dubbelBestraffning: "#fedba6a",
+  dubbelBestraffning: "#eebb6a",
   forlojligande: "#9bbf8a",
-  hot: "#e59775",
+  threatViolence: "#e59775",
   objektifiering: "#7b8ac4",
   osynliggorande: "#e0e0e0",
   skuldSkam: "#7ec0ef",
@@ -89,10 +81,6 @@ export const textStyles = StyleSheet.create({
 });
 
 export const cardStyles = StyleSheet.create({
-  container: {
-    marginLeft: "auto",
-    marginRight: "auto",
-  },
   header: {
     width: "100%",
     justifyContent: "center",
@@ -112,7 +100,6 @@ export const cardStyles = StyleSheet.create({
     width: "48%",
     justifyContent: "center",
     alignItems: "center",
-    maxHeight: 200,
     minHeight: 150,
     borderRadius: 10,
     marginBottom: 0,
@@ -120,22 +107,23 @@ export const cardStyles = StyleSheet.create({
     marginRight: 3,
     marginTop: 6,
   },
+  title: {
+    fontSize: 12,
+    textAlign: "center",
+    marginTop: 5,
+    marginBottom: 10,
+  },
+  image: {
+    marginTop: 0,
+    width: "100%",
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
+  },
   icon: {
     marginLeft: "auto",
     marginRight: "auto",
     marginBottom: 10,
     marginTop: 10,
-  },
-  title: {
-    fontSize: 15,
-    textAlign: "center",
-  },
-  image: {
-    marginTop: 20,
-    marginLeft: "auto",
-    marginRight: "auto",
-    borderTopRightRadius: 15,
-    borderTopLeftRadius: 15,
   },
 });
 

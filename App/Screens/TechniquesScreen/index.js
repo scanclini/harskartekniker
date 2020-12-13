@@ -3,7 +3,7 @@ import { Text, View, ScrollView } from "react-native";
 import { screenStyles, cardStyles, textStyles } from "../../Styles/StyleSheet";
 import { TechniquesList } from "./masterSuppressionTechniques";
 
-export function InformationScreen() {
+export function TechniquesScreen({ navigation }) {
   return (
     <ScrollView>
       <View style={screenStyles.screenContainer}>
@@ -13,10 +13,13 @@ export function InformationScreen() {
           Härskartekniker ärolika maktprocesser som används för att utöva
           negativ makt över andra. Idag talas det ofta om sju härskartekniker:
         </Text>
-        <View style={cardStyles.container}>
+        {/* <View style={{ ...cardStyles.techiques }}>
           <View style={cardStyles.cardsContainer}>
-            <TechniquesList />
+            <TechniquesList navigation={navigation} />
           </View>
+        </View> */}
+        <View style={cardStyles.cardsContainer}>
+          <TechniquesList navigation={navigation} />
         </View>
       </View>
     </ScrollView>

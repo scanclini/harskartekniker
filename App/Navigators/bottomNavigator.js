@@ -4,13 +4,14 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import VictimStackNavigator from "../Screens/VictimScreen/victimStackNavigator";
 import ObserverStackNavigator from "../Screens/ObserverScreen/observerStackNavigator";
+import AttackerStackNavigator from "../Screens/AttackerScreen/attackerStackNavigator";
+import TechniquesStackNavigator from "../Screens/TechniquesScreen/stackNavigator";
 import RootNavigator from "./rootStackNavigator";
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
-import { InformationScreen } from "../Screens/InformationScreen";
 import { ObserverScreen } from "../Screens/ObserverScreen";
 import { AttackerScreen } from "../Screens/AttackerScreen";
-import { HomeScreen } from "../Screens/HomeScreen";
+import HomeScreen from "../Screens/HomeScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -51,7 +52,7 @@ export default function BottomNavigator() {
       />
       <Tab.Screen
         name="Attacker"
-        component={AttackerScreen}
+        component={AttackerStackNavigator}
         options={{
           tabBarLabel: "Attacker",
           tabBarIcon: ({ color }) => (
@@ -60,8 +61,8 @@ export default function BottomNavigator() {
         }}
       />
       <Tab.Screen
-        name="Information"
-        component={InformationScreen}
+        name="Techniques"
+        component={TechniquesStackNavigator}
         options={{
           tabBarLabel: "Information",
           tabBarIcon: ({ color }) => (

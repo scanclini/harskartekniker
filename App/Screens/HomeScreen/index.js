@@ -32,7 +32,7 @@ const MiunHeader = () => (
   </Card>
 );
 
-export function HomeScreen({ navigation }) {
+function HomeScreen({ navigation }) {
   const sectionsList = sections.map((section) => {
     const { id, path, title, icon } = section;
     return (
@@ -68,3 +68,5 @@ export function HomeScreen({ navigation }) {
     </ScrollView>
   );
 }
+
+export default HomeScreen;

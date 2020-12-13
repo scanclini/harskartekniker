@@ -3,7 +3,7 @@ import { techniqueColors } from "../../Styles/StyleSheet";
 const {
   dubbelBestraffning,
   forlojligande,
-  hot,
+  threatViolence,
   objektifiering,
   osynliggorande,
   skuldSkam,
@@ -94,13 +94,13 @@ export const scenarios = [
     id: 13,
     value:
       "Någon sa eller gjorde något som gjorde att jag blev rädd eller kände mig hotad",
-    counterStrategy: "PersonalSafetyFirst",
-    color: hot,
+    counterStrategy: "ThreatViolence",
+    color: threatViolence,
   },
   {
     id: 14,
     value: "Någon utsatte mig för trakasserier, ofredanden eller våld",
-    counterStrategy: "PersonalSafetyFirst",
-    color: hot,
+    counterStrategy: "ThreatViolence",
+    color: threatViolence,
   },
 ];

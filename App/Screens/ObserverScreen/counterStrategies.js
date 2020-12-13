@@ -28,7 +28,7 @@ export function DemandTransparencyScreen() {
   );
 }
 
-export function RidiculingScreen() {
+export function RidiculeScreen() {
   return (
     <ScrollView>
       <View>
@@ -55,8 +55,8 @@ export function DoubleRewardScreen() {
         </Text>
         <Text>
           Utgå ifrån att alla gör så gott de kan och backa den som utsätts genom
-          att påpeka att kritiken är orimlig.\n\nDu kan också hjälpa personen
-          genom att tydliggöra för hen att den utsatts för dubbelbestraffning.
+          att påpeka att kritiken är orimlig. Du kan också hjälpa personen genom
+          att tydliggöra för hen att den utsatts för dubbelbestraffning.
           Uppmuntra personen att vara tydlig med hur hen upplever de dubbla
           budskapen.
         </Text>

@@ -21,6 +21,6 @@ export const sections = [
     id: 4,
     icon: "information-variant",
     title: "Information om härskartekniker",
-    path: "Information",
+    path: "Techniques",
   },
 ];

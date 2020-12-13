@@ -6,7 +6,7 @@ import Undanhallande from "../../../assets/milla_undanhallande.jpg";
 import Dubbelbestraffning from "../../../assets/milla_dubbelbestraffning.jpg";
 import Skuldoskam from "../../../assets/milla_skuldoskam.jpg";
 import Objektifiering from "../../../assets/milla_objektifiering.jpg";
-import Hot from "../../../assets/milla_hot.jpg";
+import threatViolence from "../../../assets/milla_threat_force.jpg";
 
 export function TakePlaceScreen() {
   return (
@@ -131,7 +131,7 @@ export function ShiftFocusScreen() {
   );
 }
 
-export function PersonalSafetyFirstScreen() {
+export function ThreatViolenceScreen() {
   return (
     <ScrollView>
       <View>
@@ -146,7 +146,7 @@ export function PersonalSafetyFirstScreen() {
           om våld ett brott.
         </Text>
       </View>
-      <Image source={Hot} />
+      <Image source={threatViolence} />
       <Text>Illustration av hot och våld. Bild av Milla Lepistö.</Text>
     </ScrollView>
   );

@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { ObserverScreen } from "./";
 import {
   DemandTransparencyScreen,
-  RidiculingScreen,
+  RidiculeScreen,
   DoubleRewardScreen,
   IntellectualizeScreen,
 } from "./counterStrategies";
@@ -19,7 +19,7 @@ export default function StackNavigator() {
         name="DemandTransparency"
         component={DemandTransparencyScreen}
       />
-      <Stack.Screen name="Ridiculing" component={RidiculingScreen} />
+      <Stack.Screen name="Ridicule" component={RidiculeScreen} />
       <Stack.Screen name="DoubleReward" component={DoubleRewardScreen} />
       <Stack.Screen name="Intellectualize" component={IntellectualizeScreen} />
     </Stack.Navigator>

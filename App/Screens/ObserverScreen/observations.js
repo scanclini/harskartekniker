@@ -3,7 +3,7 @@ import { techniqueColors } from "../../Styles/StyleSheet";
 const {
   dubbelBestraffning,
   forlojligande,
-  hot,
+  threatViolence,
   objektifiering,
   osynliggorande,
   skuldSkam,
@@ -28,15 +28,15 @@ export const observations = [
     id: 3,
     value:
       "Någon pratade förminskande om någon annan eller skämtade på dennes bekostnad",
-    counterStrategy: "Ridiculing",
+    counterStrategy: "Ridicule",
     color: forlojligande,
   },
   {
     id: 4,
     value:
       "Någon av mina kollegor uteslöts från ett möte eller förhindrades från att ta del av information.",
-    counterStrategy: "DemandTransparency",
-    color: hot,
+    counterStrategy: "DoubleReward",
+    color: dubbelBestraffning,
   },
   {
     id: 5,

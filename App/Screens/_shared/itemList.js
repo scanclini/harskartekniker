@@ -5,7 +5,6 @@ import { scenarioStyles } from "../../Styles/StyleSheet";
 
 export const ItemList = ({ items, navigation }) => {
   const itemList = items.map((item) => {
-    console.log("COLOR", item.color);
     return (
       <TouchableOpacity
         key={`${item.id}`}
@@ -24,5 +23,5 @@ export const ItemList = ({ items, navigation }) => {
       </TouchableOpacity>
     );
   });
-  return <View style={scenarioStyles.container}>{itemList}</View>;
+  return <View>{itemList}</View>;
 };

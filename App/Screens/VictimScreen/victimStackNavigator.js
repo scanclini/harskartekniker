@@ -2,13 +2,15 @@ import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { VictimScreen } from "./";
-import { TakePlaceScreen } from "./counterStrategies";
-import { QuestionScreen } from "./counterStrategies";
-import { DemandTransparencyScreen } from "./counterStrategies";
-import { PrioritizeScreen } from "./counterStrategies";
-import { IntellectualizeScreen } from "./counterStrategies";
-import { ShiftFocusScreen } from "./counterStrategies";
-import { PersonalSafetyFirstScreen } from "./counterStrategies";
+import {
+  TakePlaceScreen,
+  QuestionScreen,
+  DemandTransparencyScreen,
+  PrioritizeScreen,
+  IntellectualizeScreen,
+  ShiftFocusScreen,
+  ThreatViolenceScreen,
+} from "./counterStrategies";
 
 const Stack = createStackNavigator();
 
@@ -21,10 +23,7 @@ export default function VictimStackNavigator() {
       <Stack.Screen name="Prioritize" component={PrioritizeScreen} />
       <Stack.Screen name="Intellectualize" component={IntellectualizeScreen} />
       <Stack.Screen name="ShiftFocus" component={ShiftFocusScreen} />
-      <Stack.Screen
-        name="PersonalSafetyFirst"
-        component={PersonalSafetyFirstScreen}
-      />
+      <Stack.Screen name="ThreatViolence" component={ThreatViolenceScreen} />
 
       <Stack.Screen
         name="DemandTransparency"
