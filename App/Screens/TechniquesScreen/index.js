@@ -4,11 +4,11 @@ import { screenStyles, cardStyles, textStyles } from "../../Styles/StyleSheet";
 import { TechniquesList } from "./masterSuppressionTechniques";
 
 export function TechniquesScreen({ navigation }) {
-  const { screenContainer } = screenStyles;
+  const { background, screenContainer } = screenStyles;
   const { h1, h3, p } = textStyles;
 
   return (
-    <ScrollView>
+    <ScrollView style={background}>
       <View style={screenContainer}>
         <Text style={h1}>i</Text>
         <Text style={h3}>Vad är härskartekniker?</Text>
