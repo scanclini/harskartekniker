@@ -15,6 +15,7 @@ export function AttackerScreen({ navigation }) {
       items={harrassments}
       title={title}
       content={content}
+      navigation={navigation}
     />
   );
 }

@@ -7,12 +7,11 @@ import { StackActions, NavigationActions } from "react-navigation";
 
 export const ItemList = ({ items, navigation }) => {
   const itemList = items.map((item) => {
+    console.log("ITMES", item.counterStrategy);
     return (
       <TouchableOpacity
         key={`${item.id}`}
-        onPress={() => {
-          navigation.navigate(item.counterStrategy);
-        }}
+        onPress={() => navigation.navigate(String(item.counterStrategy))}
       >
         <Card
           containerStyle={{

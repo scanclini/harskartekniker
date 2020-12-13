@@ -15,6 +15,7 @@ export function VictimScreen({ navigation }) {
       items={scenarios}
       title={title}
       content={content}
+      navigation={navigation}
     />
   );
 }

@@ -15,6 +15,7 @@ export function ObserverScreen({ navigation }) {
       items={observations}
       title={title}
       content={content}
+      navigation={navigation}
     />
   );
 }
