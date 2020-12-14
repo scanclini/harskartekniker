@@ -3,11 +3,8 @@ import { Text, View, TouchableOpacity } from "react-native";
 import { Card } from "react-native-elements";
 import { scenarioStyles } from "../../Styles/StyleSheet";
 
-import { StackActions, NavigationActions } from "react-navigation";
-
 export const ItemList = ({ items, navigation }) => {
   const itemList = items.map((item) => {
-    console.log("ITMES", item.counterStrategy);
     return (
       <TouchableOpacity
         key={`${item.id}`}
