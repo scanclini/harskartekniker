@@ -6,28 +6,37 @@ import {
   sectionStyles,
 } from "../../Styles/StyleSheet";
 
-import Osynliggorande from "../../../assets/milla_osynliggorande.jpg";
-import Forlojligande from "../../../assets/milla_forlojligande.jpg";
-import Undanhallande from "../../../assets/milla_undanhallande.jpg";
-import Dubbelbestraffning from "../../../assets/milla_dubbelbestraffning.jpg";
-import Skuldoskam from "../../../assets/milla_skuldoskam.jpg";
-import Objektifiering from "../../../assets/milla_objektifiering.jpg";
-import ThreatViolence from "../../../assets/milla_threat_force.jpg";
+import MakingInvisible from "../../../assets/milla_osynliggorande.jpg";
+import Ridicule from "../../../assets/milla_forlojligande.jpg";
+import WithholdInformation from "../../../assets/milla_undanhallande.jpg";
+import DoubleBind from "../../../assets/milla_dubbelbestraffning.jpg";
+import HeapBlame from "../../../assets/milla_skuldoskam.jpg";
+import Objectifying from "../../../assets/milla_objektifiering.jpg";
+import ThreatOfForce from "../../../assets/milla_threat_force.jpg";
 
-const getImage = (technique) => {
-  if (technique === "osynliggorande") return <Image source={Osynliggorande} />;
-  if (technique === "forlojligande") return <Image source={Forlojligande} />;
-  if (technique === "undanhallande") return <Image source={Undanhallande} />;
-  if (technique === "dubbelbestraffning")
-    return <Image source={Dubbelbestraffning} />;
-  if (technique === "skuldoskam") return <Image source={Skuldoskam} />;
-  if (technique === "objektifiering") return <Image source={Objektifiering} />;
-  if (technique === "threatViolence") return <Image source={ThreatViolence} />;
-
-  return null;
+const getImage = (id) => {
+  switch (id) {
+    case "makingInvisible":
+      return <Image source={MakingInvisible} />;
+    case "ridicule":
+      return <Image source={Ridicule} />;
+    case "withholdInformation":
+      return <Image source={WithholdInformation} />;
+    case "doubleBind":
+      return <Image source={DoubleBind} />;
+    case "heapBlame":
+      return <Image source={HeapBlame} />;
+    case "objectifying":
+      return <Image source={Objectifying} />;
+    case "threatOfForce":
+      return <Image source={ThreatOfForce} />;
+    default:
+      return null;
+  }
 };
 
 export const CounterStrategyLayout = ({
+  id,
   technique,
   image,
   title,
@@ -45,7 +54,7 @@ export const CounterStrategyLayout = ({
         <Text style={p}>{subTitle}</Text>
         <Text>{content}</Text>
       </View>
-      {getImage(technique)}
+      {getImage(id)}
       <Text>Illustration av {technique}. Bild av Milla Lepistö.</Text>
     </ScrollView>
   );

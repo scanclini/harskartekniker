@@ -5,13 +5,13 @@ const IOS_FONT = "Arial";
 const ANDROID_FONT = "Roboto";
 
 export const techniqueColors = {
-  dubbelBestraffning: "#eebb6a",
-  forlojligande: "#9bbf8a",
-  threatViolence: "#e59775",
-  objektifiering: "#7b8ac4",
-  osynliggorande: "#e0e0e0",
-  skuldSkam: "#7ec0ef",
-  undanhallande: "#fced8e",
+  doubleBind: "#eebb6a",
+  ridicule: "#9bbf8a",
+  threatOfForce: "#e59775",
+  objectifying: "#7b8ac4",
+  makingInvisible: "#e0e0e0",
+  heapBlame: "#7ec0ef",
+  withholdInformation: "#fced8e",
 };
 
 export const icons = {
