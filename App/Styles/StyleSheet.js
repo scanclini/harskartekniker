@@ -144,6 +144,21 @@ export const cardStyles = StyleSheet.create({
   },
 });
 
+export const counterStrategyStyles = StyleSheet.create({
+  h2: {
+    fontSize: 27,
+    marginBottom: 10,
+  },
+  h3: { ...textStyles.h3 },
+  p: { ...textStyles.p },
+  source: {
+    fontSize: 12,
+    marginLeft: "10%",
+    marginRight: "10%",
+    marginTop: 10,
+  },
+});
+
 export const scenarioStyles = StyleSheet.create({
   container: {
     width: "100%",

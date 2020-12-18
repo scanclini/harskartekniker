@@ -1,10 +1,6 @@
 import React from "react";
 import { Text, View, ScrollView, Image } from "react-native";
-import {
-  screenStyles,
-  textStyles,
-  sectionStyles,
-} from "../../Styles/StyleSheet";
+import { screenStyles, counterStrategyStyles } from "../../Styles/StyleSheet";
 
 import MakingInvisible from "../../../assets/milla_osynliggorande.jpg";
 import Ridicule from "../../../assets/milla_forlojligande.jpg";
@@ -44,18 +40,18 @@ export const CounterStrategyLayout = ({
   content,
 }) => {
   const { screenContainer, background } = screenStyles;
-  const { textContainer, listContainer } = sectionStyles;
-  const { h1, h3, p } = textStyles;
-
+  const { h3, h2, p, source } = counterStrategyStyles;
   return (
     <ScrollView style={background}>
       <View style={screenContainer}>
-        <Text style={h3}>{title}</Text>
-        <Text style={p}>{subTitle}</Text>
-        <Text>{content}</Text>
+        <Text style={h2}>{title}</Text>
+        <Text style={h3}>{subTitle}</Text>
+        <Text style={p}>{content}</Text>
       </View>
       {getImage(id)}
-      <Text>Illustration av {technique}. Bild av Milla Lepistö.</Text>
+      <Text style={source}>
+        Illustration av {technique}. Bild av Milla Lepistö.
+      </Text>
     </ScrollView>
   );
 };
