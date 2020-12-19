@@ -20,42 +20,58 @@ const {
   techniquesIcon,
 } = icons;
 
+const ICON_COLOR = "#bbbbbb";
+const ACTIVE_COLOR = "#ff6347";
+const BACKGROUND_COLOR = "white";
+
 const Tab = createBottomTabNavigator();
 
 export default function BottomNavigator() {
   return (
     <Tab.Navigator
-      barStyle={{ backgroundColor: "white" }}
-      tabBarOptions={{ activeTintColor: "#ff6347" }}
+      barStyle={{ backgroundColor: BACKGROUND_COLOR }}
+      tabBarOptions={{
+        activeTintColor: ACTIVE_COLOR,
+        inactiveTintColor: BACKGROUND_COLOR,
+      }}
     >
       <Tab.Screen
         name="Home"
         component={HomeScreen}
-        options={({ route }) => ({
+        options={{
           tabBarVisible: false,
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name={homeIcon} color={color} size={26} />
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons
+              name={homeIcon}
+              color={focused ? ACTIVE_COLOR : ICON_COLOR}
+              size={26}
+            />
           ),
-        })}
+        }}
       />
       <Tab.Screen
         name="Victim"
         component={VictimStackNavigator}
-        options={({ route }) => ({
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name={victimIcon} color={color} size={26} />
+        options={{
+          tabBarLabel: "Jag har blivit utsatt",
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons
+              name={victimIcon}
+              color={focused ? ACTIVE_COLOR : ICON_COLOR}
+              size={26}
+            />
           ),
-        })}
+        }}
       />
       <Tab.Screen
         name="Observer"
         component={ObserverStackNavigator}
         options={{
           tabBarLabel: "Jag har sett något",
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={observerIcon}
-              color={color}
+              color={focused ? ACTIVE_COLOR : ICON_COLOR}
               size={26}
             />
           ),
@@ -65,11 +81,11 @@ export default function BottomNavigator() {
         name="Attacker"
         component={AttackerStackNavigator}
         options={{
-          tabBarLabel: "Attacker",
-          tabBarIcon: ({ color }) => (
+          tabBarLabel: "Jag har utsatt någon",
+          tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={attackerIcon}
-              color={color}
+              color={focused ? ACTIVE_COLOR : ICON_COLOR}
               size={26}
             />
           ),
@@ -79,11 +95,11 @@ export default function BottomNavigator() {
         name="Techniques"
         component={TechniquesStackNavigator}
         options={{
-          tabBarLabel: "Information",
-          tabBarIcon: ({ color }) => (
+          tabBarLabel: "Härskartekniker",
+          tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={techniquesIcon}
-              color={color}
+              color={focused ? ACTIVE_COLOR : ICON_COLOR}
               size={26}
             />
           ),

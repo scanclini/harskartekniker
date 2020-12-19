@@ -1,5 +1,4 @@
 import React from "react";
-
 import { CounterStrategyLayout } from "../_shared/counterStrategyLayout";
 
 export function WithholdInformationScreen() {

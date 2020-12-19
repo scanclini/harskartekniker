@@ -45,7 +45,7 @@ export const CounterStrategyLayout = ({
     <ScrollView style={background}>
       <View style={screenContainer}>
         <Text style={h2}>{title}</Text>
-        <Text style={h3}>{subTitle}</Text>
+        {subTitle && <Text style={h3}>{subTitle}</Text>}
         <Text style={p}>{content}</Text>
       </View>
       {getImage(id)}
