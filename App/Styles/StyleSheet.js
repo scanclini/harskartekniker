@@ -130,17 +130,35 @@ export const cardStyles = StyleSheet.create({
     marginTop: 5,
     marginBottom: 10,
   },
-  image: {
-    marginTop: 0,
-    width: "100%",
-    borderTopRightRadius: 10,
-    borderTopLeftRadius: 10,
-  },
   icon: {
     marginLeft: "auto",
     marginRight: "auto",
     marginBottom: 10,
     marginTop: 10,
+  },
+});
+
+export const techniqueCards = StyleSheet.create({
+  card: {
+    width: "48%",
+    borderRadius: 10,
+    marginBottom: 0,
+    marginLeft: 3,
+    marginRight: 3,
+    marginTop: 6,
+  },
+  title: {
+    fontSize: 14,
+    textAlign: "center",
+    paddingTop: 10,
+    marginBottom: 0,
+  },
+  image: {
+    marginTop: 0,
+    marginBottom: 0,
+    width: "100%",
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
   },
 });
 
