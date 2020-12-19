@@ -33,6 +33,9 @@ export default function BottomNavigator() {
       tabBarOptions={{
         activeTintColor: ACTIVE_COLOR,
         inactiveTintColor: BACKGROUND_COLOR,
+        labelStyle: {
+          fontSize: 8,
+        },
       }}
     >
       <Tab.Screen
@@ -40,6 +43,7 @@ export default function BottomNavigator() {
         component={HomeScreen}
         options={{
           tabBarVisible: false,
+          tabBarLabel: "Hem",
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={homeIcon}
