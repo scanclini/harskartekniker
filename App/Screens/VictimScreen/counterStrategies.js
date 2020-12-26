@@ -1,4 +1,5 @@
 import React from "react";
+import translations from "../../translations/victim/counterStrategies";
 
 import { CounterStrategyLayout } from "../_shared/counterStrategyLayout";
 
@@ -7,9 +8,9 @@ export function MakingInvisibleScreen() {
     <CounterStrategyLayout
       id="makingInvisible"
       technique="osynliggörande"
-      title="Ta plats"
-      subTitle="Någon försöker osynliggöra dig"
-      content="Gå in i konversationen med en kommentar som bekräftar din närvaro. T.ex: 'Jag hör att du diskuterar saker som berör mig. Min uppfattning är att…’ eller ’Vad intressant att ni diskuterar mitt kunskapsområde! Min erfarenhet är att…'"
+      title={translations.t("MakingInvisibleTitle")}
+      subTitle={translations.t("MakingInvisibleSubTitle")}
+      content={translations.t("MakingInvisibleContent")}
     />
   );
 }
@@ -19,14 +20,9 @@ export function RidiculeScreen() {
     <CounterStrategyLayout
       id="ridicule"
       technique="förlöjligande"
-      title="Ifrågasätt"
-      subTitle="Någon försöker förlöjliga dig"
-      content={`Låt inte förlöjligande skämt eller kommenterar gå obemärkt förbi. Skratta inte med, utan hejda konversationen och kräv en förklaring. Upprepa vad som sagts ord för ord och be om en närmare förklaring. 
-
-T.ex: 
-’Vad menar du med att någon över 50 inte skulle kunna hantera det där?’ 
-’Varför skulle det vara bättre om 'grabbarna sköter det där’?’ 
-’Tycker du att mitt arbete är lustigt? Hur menar du då?’`}
+      title={translations.t("RidiculeTitle")}
+      subTitle={translations.t("RidiculeSubTitle")}
+      content={translations.t("RidiculeContent")}
     />
   );
 }

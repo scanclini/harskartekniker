@@ -2,13 +2,13 @@ import React from "react";
 import { Text, View, ScrollView, Image } from "react-native";
 import { screenStyles, counterStrategyStyles } from "../../Styles/StyleSheet";
 
-import MakingInvisible from "../../../assets/milla_osynliggorande.jpg";
-import Ridicule from "../../../assets/milla_forlojligande.jpg";
-import WithholdInformation from "../../../assets/milla_undanhallande.jpg";
-import DoubleBind from "../../../assets/milla_dubbelbestraffning.jpg";
-import HeapBlame from "../../../assets/milla_skuldoskam.jpg";
-import Objectifying from "../../../assets/milla_objektifiering.jpg";
-import ThreatOfForce from "../../../assets/milla_threat_force.jpg";
+import MakingInvisible from "../../assets/milla_osynliggorande.jpg";
+import Ridicule from "../../assets/milla_forlojligande.jpg";
+import WithholdInformation from "../../assets/milla_undanhallande.jpg";
+import DoubleBind from "../../assets/milla_dubbelbestraffning.jpg";
+import HeapBlame from "../../assets/milla_skuldoskam.jpg";
+import Objectifying from "../../assets/milla_objektifiering.jpg";
+import ThreatOfForce from "../../assets/milla_threat_force.jpg";
 
 const getImage = (id) => {
   switch (id) {
@@ -49,6 +49,7 @@ export const CounterStrategyLayout = ({
         <Text style={p}>{content}</Text>
       </View>
       {getImage(id)}
+      {/* TODO: Fix text */}
       <Text style={source}>
         Illustration av {technique}. Bild av Milla Lepistö.
       </Text>

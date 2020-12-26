@@ -1,4 +1,5 @@
 import { techniqueColors } from "../../Styles/StyleSheet";
+import translations from "../../translations/victim/scenarios";
 
 const {
   doubleBind,
@@ -13,93 +14,85 @@ const {
 export const scenarios = [
   {
     id: 1,
-    value:
-      "Två eller flera personer pratade om mig som om att jag inte var där",
+    value: translations.t("MakingInvisible1"),
     counterStrategy: "MakingInvisible",
     color: makingInvisible,
   },
   {
     id: 2,
-    value:
-      "Någon diskuterade frågor som rör mig, i min närvaro, utan att involvera mig",
+    value: translations.t("MakingInvisible2"),
     counterStrategy: "MakingInvisible",
     color: makingInvisible,
   },
   {
     id: 3,
-    value:
-      "Någon skämtade om mig på ett sätt som gjorde att jag kände mig obekväm",
+    value: translations.t("Ridicule1"),
     counterStrategy: "Ridicule",
     color: ridicule,
   },
   {
     id: 4,
-    value: "Någon förminskade mina åstdakommanden",
+    value: translations.t("Ridicule2"),
     counterStrategy: "Ridicule",
     color: ridicule,
   },
   {
     id: 5,
-    value: "Någon undanhöll information from mig",
+    value: translations.t("WithholdInformation1"),
     counterStrategy: "WithholdInformation",
     color: withholdInformation,
   },
   {
     id: 6,
-    value:
-      "Det hölls ett möte (formellt eller inte formellt) där jag borde varit med men som jag inte var bjuden till",
+    value: translations.t("WithholdInformation2"),
     counterStrategy: "WithholdInformation",
     color: withholdInformation,
   },
   {
     id: 7,
-    value: "Någon fick mig att känna att vad jag än gör gör jag fel",
+    value: translations.t("DoubleBind1"),
     counterStrategy: "DoubleBind",
     color: doubleBind,
   },
   {
     id: 8,
-    value:
-      "Jag blev direkt eller indirekt kritiserad för en privat eller arbetsrelaterad situation jag inte haft kontroll över",
+    value: translations.t("DoubleBind2"),
     counterStrategy: "DoubleBind",
     color: doubleBind,
   },
   {
     id: 9,
-    value: "Någon påpekade ett misstag jag gjort i syfte att genera mig",
+    value: translations.t("DoubleBind3"),
     counterStrategy: "DoubleBind",
     color: doubleBind,
   },
   {
     id: 10,
-    value: "Någon gav mig skulden för något som är bortom min kontroll",
+    value: translations.t("HeapBlame1"),
     counterStrategy: "HeapBlame",
     color: heapBlame,
   },
   {
     id: 11,
-    value:
-      "Någon flyttade fokus från det jag sa till min klädsel eller mitt utseende",
+    value: translations.t("Objectifying1"),
     counterStrategy: "Objectifying",
     color: objectifying,
   },
   {
     id: 12,
-    value:
-      "Någon antydde att jag utnyttjat min sexualitet eller mitt utseende för att få fördelar eller befordran",
+    value: translations.t("Objectifying2"),
     counterStrategy: "Objectifying",
     color: objectifying,
   },
   {
     id: 13,
-    value:
-      "Någon sa eller gjorde något som gjorde att jag blev rädd eller kände mig hotad",
+    value: translations.t("ThreatOfForce1"),
     counterStrategy: "ThreatOfForce",
     color: threatOfForce,
   },
   {
     id: 14,
-    value: "Någon utsatte mig för trakasserier, ofredanden eller våld",
+    value: translations.t("ThreatOfForce2"),
     counterStrategy: "ThreatOfForce",
     color: threatOfForce,
   },

@@ -1,12 +1,11 @@
 import React from "react";
-import { Text, View, Image, StyleSheet, ScrollView } from "react-native";
-import { Card } from "react-native-elements";
+import translations from "../../translations/home/main";
+import { Text, View, ScrollView } from "react-native";
 import {
   screenStyles,
   cardStyles,
   textStyles,
   sectionStyles,
-  assetStyles,
 } from "../../Styles/StyleSheet";
 import { SectionsList } from "./sections";
 import { MiunHeader } from "./header";
@@ -21,11 +20,8 @@ function HomeScreen({ navigation }) {
       <ScrollView style={background}>
         <View style={screenContainer}>
           <View style={sectionStyles.textContainer}>
-            <Text style={h1}>Power up</Text>
-            <Text style={p}>
-              En app som hjälper dig att uppmärksamma och motverka sju vanliga
-              härskartekniker
-            </Text>
+            <Text style={h1}>Power up!</Text>
+            <Text style={p}>{translations.t("firstPageText")}</Text>
           </View>
           <View style={cardStyles.cardsContainer}>
             <SectionsList navigation={navigation} />
