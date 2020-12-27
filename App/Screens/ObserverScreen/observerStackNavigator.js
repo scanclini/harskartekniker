@@ -26,6 +26,7 @@ export default function StackNavigator() {
       <Stack.Screen name="Ridicule" component={RidiculeScreen} />
       <Stack.Screen name="DoubleBind" component={DoubleBindScreen} />
       <Stack.Screen name="HeapBlame" component={HeapBlameScreen} />
+      <Stack.Screen name="Objectifying" component={ObjectifyingScreen} />
     </Stack.Navigator>
   );
 }

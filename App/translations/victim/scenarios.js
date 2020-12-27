@@ -2,7 +2,7 @@ export const scenariosEn = {
   v_makingInvisible1: `Two or more people talked about me in my presence - as if I wasn't even there.`,
   v_makingInvisible2: `Two or more people discussed issues that directly affect me in my presence - without involving me in the discussion.`,
   v_ridicule1: "Someone joked about me in a way that made me uncomfortable.",
-  v_Ridicule2: `Someone diminished my accomplishment or my contribution to the team.`,
+  v_ridicule2: `Someone diminished my accomplishment or my contribution to the team.`,
   v_withholdInformation1: `I was not told about a decision, rule, or event that affects me directly.`,
   v_withholdInformation2: `I was left out of a meeting at which decisions, rules, or events that affect me directly were discussed.`,
   v_doubleBind1: `Someone made me feel that I always do the wrong thing, no matter what I do or how I go about it.`,
@@ -11,8 +11,8 @@ export const scenariosEn = {
   v_heapBlame1: `Someone blamed me for something that is out of my control.`,
   v_objectifying1: `Someone shifted the focus from what I was saying to what I was wearing or how I look.`,
   v_objectifying2: `Someone commented on my looks or sexuality to detract from my performance or opinion.`,
-  v_ThreatOfForce1: `Someone said or did something that made me afraid.`,
-  v_ThreatOfForce2: `Someone used force against me.`,
+  v_threatOfForce1: `Someone said or did something that made me afraid.`,
+  v_threatOfForce2: `Someone used force against me.`,
 };
 
 export const scenariosSv = {

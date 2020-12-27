@@ -1,6 +1,5 @@
 import React from "react";
 import translations from "../../translations";
-
 import { CounterStrategyLayout } from "../_shared/counterStrategyLayout";
 
 export function MakingInvisibleScreen() {
