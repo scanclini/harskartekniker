@@ -26,8 +26,7 @@ export const scenarioSv = {
   a_doubleBind1: `Jag gav någon skulden för något hen inte hade kontroll över eller fick personen att känna att vad hen än gör så blir det fel.`,
   a_doubleBind2: `Jag kritiserade en annan person för att vara i en privat eller arbetsrelaterad situation som de * inte har någon kontroll över.`,
   a_doubleBind3: `I pointed out a mistake another person made just to embarrass them*.`,
-  a_heapBlame1:
-    "Jag skuldbelade en annan person för något hen inte kan rå för.",
+  a_heapBlame1: `Jag skuldbelade en annan person för något hen inte kan rå för.`,
   a_objectifying1: `I shifted the focus from what another person was saying to how they* look or what they* were wearing.`,
   a_objectifying2: `Jag kommenterade en persons utseende eller sexualitet för att försämra hens prestation eller åsikt.`,
   a_objectifying3: `Jag antydde att en annan person använder sitt * utseende eller sin * sexualitet för att få orättvisa fördelar.`,
