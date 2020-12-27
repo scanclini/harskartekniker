@@ -1,5 +1,5 @@
 import React from "react";
-import translations from "../../translations/home/sections";
+import translations from "../../translations";
 import { Text, TouchableOpacity } from "react-native";
 import { Card } from "react-native-elements";
 import { cardStyles } from "../../Styles/StyleSheet";

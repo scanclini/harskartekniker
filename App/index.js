@@ -5,11 +5,15 @@ import BottomNavigator from "./Navigators/bottomNavigator";
 import * as Localization from "expo-localization";
 import i18n from "i18n-js";
 
-// Set the locale once at the beginning of your app.
-i18n.locale = Localization.locale;
-i18n.fallbacks = true;
-
 export default function App() {
+  // Set the locale once at the beginning of your app.
+  // TODO: Fix so it works
+  React.useEffect(() => {
+    // Update the document title using the browser API
+    i18n.locale = Localization.locale;
+    i18n.fallbacks = true;
+  });
+
   return (
     <NavigationContainer>
       <BottomNavigator />

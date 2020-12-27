@@ -1,5 +1,5 @@
 import React from "react";
-import translations from "../../translations/home/main";
+import translations from "../../translations";
 import { Text, View, ScrollView } from "react-native";
 import {
   screenStyles,
@@ -21,7 +21,7 @@ function HomeScreen({ navigation }) {
         <View style={screenContainer}>
           <View style={sectionStyles.textContainer}>
             <Text style={h1}>Power up!</Text>
-            <Text style={p}>{translations.t("firstPageText")}</Text>
+            <Text style={p}>{translations.t("h_text")}</Text>
           </View>
           <View style={cardStyles.cardsContainer}>
             <SectionsList navigation={navigation} />

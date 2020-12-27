@@ -2,7 +2,7 @@ import React from "react";
 import { icons } from "../../Styles/StyleSheet";
 import { PageLayout } from "../_shared/pageLayout";
 import { scenarios } from "./scenarios";
-import translations from "../../translations/victim/main";
+import translations from "../../translations";
 
 const { victimIcon } = icons;
 
@@ -11,8 +11,8 @@ export function VictimScreen({ navigation }) {
     <PageLayout
       icon={victimIcon}
       items={scenarios}
-      title={translations.t("title")}
-      content={translations.t("text")}
+      title={translations.t("v_title")}
+      content={translations.t("v_text")}
       navigation={navigation}
     />
   );
