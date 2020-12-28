@@ -1,6 +1,9 @@
 import React from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity, Image } from "react-native";
 import { Card } from "react-native-elements";
+import translations from "../../translations";
+import { masterSupressionTechniquesEn } from "../../translations/techniques/techniques";
+import { getIllustration, getCounterStrategy } from "../_shared/filters";
 
 import {
   screenStyles,
@@ -8,56 +11,26 @@ import {
   techniqueCards,
 } from "../../Styles/StyleSheet";
 
-const techniques = [
-  {
-    id: 1,
-    illustration: require("../../assets/milla_osynliggorande.jpg"),
-    name: "Osynliggörande",
-    masterTechnique: "MakingInvisible",
-  },
-  {
-    id: 2,
-    illustration: require("../../assets/milla_forlojligande.jpg"),
-    name: "Förlöjligande",
-    masterTechnique: "Ridicule",
-  },
-  {
-    id: 3,
-    illustration: require("../../assets/milla_undanhallande.jpg"),
-    name: "Undanhållande av information",
-    masterTechnique: "WithholdInformation",
-  },
-  {
-    id: 4,
-    illustration: require("../../assets/milla_dubbelbestraffning.jpg"),
-    name: "Dubbelbestraffning",
-    masterTechnique: "DoubleBind",
-  },
-  {
-    id: 5,
-    illustration: require("../../assets/milla_skuldoskam.jpg"),
-    name: "Påförande av skuld och skam",
-    masterTechnique: "HeapBlame",
-  },
-  {
-    id: 6,
-    illustration: require("../../assets/milla_objektifiering.jpg"),
-    name: "Objektifiering",
-    masterTechnique: "Objectifying",
-  },
-  {
-    id: 7,
-    illustration: require("../../assets/milla_threat_force.jpg"),
-    name: "Våld, hot om våld",
-    masterTechnique: "ThreatOfForce",
-  },
-];
+export const techniques = () => {
+  const keys = Object.keys(masterSupressionTechniquesEn);
+  let index = 0;
+  const list = keys.map((technique) => {
+    const obj = {
+      id: `${index}-${technique}`,
+      illustration: getIllustration(technique.toLowerCase()),
+      name: technique.toLowerCase(),
+      masterTechnique: getCounterStrategy(technique.toLowerCase()),
+    };
+    index += 1;
+    return obj;
+  });
+  return list;
+};
 
 export const TechniquesList = ({ navigation }) => {
-  return techniques.map((technique) => {
+  return techniques().map((technique) => {
     const { id, illustration, name, masterTechnique } = technique;
     const { card, title, image } = techniqueCards;
-
     return (
       <Card key={id} containerStyle={card}>
         <TouchableOpacity

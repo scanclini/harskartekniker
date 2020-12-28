@@ -5,10 +5,23 @@ import { victimEn, victimSv } from "./victim";
 import { homeEn, homeSv } from "./home";
 import { observerEn, observerSv } from "./observer";
 import { attackerEn, attackerSv } from "./attacker";
+import { techniquesEn, techniquesSv } from "./techniques";
 
 i18n.translations = {
-  en: { ...victimEn, ...homeEn, ...observerEn, ...attackerEn },
-  sv: { ...victimSv, ...homeSv, ...observerSv, ...attackerSv },
+  en: {
+    ...homeEn,
+    ...victimEn,
+    ...observerEn,
+    ...attackerEn,
+    ...techniquesEn,
+  },
+  sv: {
+    ...homeSv,
+    ...victimSv,
+    ...observerSv,
+    ...attackerSv,
+    ...techniquesSv,
+  },
 };
 
 export default i18n;
