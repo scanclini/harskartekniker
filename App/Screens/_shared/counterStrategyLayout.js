@@ -4,14 +4,7 @@ import { screenStyles, counterStrategyStyles } from "../../Styles/StyleSheet";
 import translations from "../../translations";
 import { getData } from "../_shared/filters";
 
-export const CounterStrategyLayout = ({
-  id,
-  technique,
-  image,
-  title,
-  subTitle,
-  content,
-}) => {
+export const CounterStrategyLayout = ({ id, title, subTitle, content }) => {
   const { screenContainer, background } = screenStyles;
   const { h3, h2, p, source } = counterStrategyStyles;
   const data = getData(id.toLowerCase());

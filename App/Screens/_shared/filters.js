@@ -23,7 +23,6 @@ const {
 } = techniqueColors;
 
 export const getData = (item) => {
-  console.log("INSIDE", item);
   if (item.includes("invisible"))
     return {
       color: makingInvisible,
