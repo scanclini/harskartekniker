@@ -1,9 +1,8 @@
 import React from "react";
 import { Text, View, TouchableOpacity, Image } from "react-native";
 import { Card } from "react-native-elements";
-import translations from "../../translations";
 import { masterSupressionTechniquesEn } from "../../translations/techniques/techniques";
-import { getIllustration, getCounterStrategy } from "../_shared/filters";
+import { getData } from "../_shared/filters";
 
 import {
   screenStyles,
@@ -15,11 +14,12 @@ export const techniques = () => {
   const keys = Object.keys(masterSupressionTechniquesEn);
   let index = 0;
   const list = keys.map((technique) => {
+    const data = getData(technique.toLowerCase());
     const obj = {
       id: `${index}-${technique}`,
-      illustration: getIllustration(technique.toLowerCase()),
-      name: technique.toLowerCase(),
-      masterTechnique: getCounterStrategy(technique.toLowerCase()),
+      illustration: data.illustration,
+      name: data.suppressionTechnique,
+      masterTechnique: data.navigation,
     };
     index += 1;
     return obj;

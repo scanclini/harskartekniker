@@ -1,11 +1,11 @@
 export const masterSupressionTechniquesEn = {
-  makingInvisible: "MakingInvisible",
+  makingInvisible: "Making invisible",
   ridicule: "Ridicule",
-  withholdInformation: "withholdInformation",
-  doubleBind: "DoubleBind",
-  heapBlame: "HeapBlame",
+  withholdInformation: "Withhold information",
+  doubleBind: "Double bind",
+  heapBlame: "Heap blame",
   objectifying: "Objectifying",
-  threatOfForce: "ThreatOfForce",
+  threatOfForce: "Threat of force",
 };
 
 export const masterSupressionTechniquesSv = {

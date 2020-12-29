@@ -10,7 +10,7 @@ import {
   HeapBlameScreen,
   ObjectifyingScreen,
   ThreatOfForceScreen,
-} from "./detailedExplications";
+} from "./explanations";
 
 const Stack = createStackNavigator();
 
