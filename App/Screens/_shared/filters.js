@@ -29,7 +29,9 @@ export const getData = (item) => {
       suppressionTechnique: translations.t("makingInvisible"),
       navigation: "MakingInvisible",
       illustration: MakingInvisible,
-      source: "some text for now",
+      source: translations.t("t_source", {
+        technique: translations.t("makingInvisible").toLowerCase(),
+      }),
     };
   if (item.includes("ridicule"))
     return {
@@ -37,7 +39,9 @@ export const getData = (item) => {
       suppressionTechnique: translations.t("ridicule"),
       navigation: "Ridicule",
       illustration: Ridicule,
-      source: "some text for now",
+      source: translations.t("t_source", {
+        technique: translations.t("ridicule").toLowerCase(),
+      }),
     };
   if (item.includes("withhold"))
     return {
@@ -45,7 +49,9 @@ export const getData = (item) => {
       suppressionTechnique: translations.t("withholdInformation"),
       navigation: "WithholdInformation",
       illustration: WithholdInformation,
-      source: "some text for now",
+      source: translations.t("t_source", {
+        technique: translations.t("withholdInformation").toLowerCase(),
+      }),
     };
   if (item.includes("doublebind"))
     return {
@@ -53,7 +59,9 @@ export const getData = (item) => {
       suppressionTechnique: translations.t("doubleBind"),
       navigation: "DoubleBind",
       illustration: DoubleBind,
-      source: "some text for now",
+      source: translations.t("t_source", {
+        technique: translations.t("doubleBind").toLowerCase(),
+      }),
     };
   if (item.includes("heapblame"))
     return {
@@ -61,7 +69,9 @@ export const getData = (item) => {
       suppressionTechnique: translations.t("heapBlame"),
       navigation: "HeapBlame",
       illustration: HeapBlame,
-      source: "some text for now",
+      source: translations.t("t_source", {
+        technique: translations.t("heapBlame").toLowerCase(),
+      }),
     };
   if (item.includes("objectifying"))
     return {
@@ -69,7 +79,9 @@ export const getData = (item) => {
       suppressionTechnique: translations.t("objectifying"),
       navigation: "Objectifying",
       illustration: Objectifying,
-      source: "some text for now",
+      source: translations.t("t_source", {
+        technique: translations.t("objectifying").toLowerCase(),
+      }),
     };
   if (item.includes("threatofforce"))
     return {
@@ -77,7 +89,9 @@ export const getData = (item) => {
       suppressionTechnique: translations.t("threatOfForce"),
       navigation: "ThreatOfForce",
       illustration: ThreatOfForce,
-      source: "some text for now",
+      source: translations.t("t_source", {
+        technique: translations.t("threatOfForce").toLowerCase(),
+      }),
     };
 };
 
