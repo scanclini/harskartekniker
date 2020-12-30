@@ -6,6 +6,7 @@ import { homeEn, homeSv } from "./home";
 import { observerEn, observerSv } from "./observer";
 import { attackerEn, attackerSv } from "./attacker";
 import { techniquesEn, techniquesSv } from "./techniques";
+import { navigatorsEn, navigatorsSv } from "./navigators";
 
 i18n.translations = {
   en: {
@@ -14,6 +15,7 @@ i18n.translations = {
     ...observerEn,
     ...attackerEn,
     ...techniquesEn,
+    ...navigatorsEn,
   },
   sv: {
     ...homeSv,
@@ -21,6 +23,7 @@ i18n.translations = {
     ...observerSv,
     ...attackerSv,
     ...techniquesSv,
+    ...navigatorsSv,
   },
 };
 

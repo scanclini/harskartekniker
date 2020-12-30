@@ -4,11 +4,12 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { icons } from "../Styles/StyleSheet";
 
 import HomeScreen from "../Screens/HomeScreen";
-
 import VictimStackNavigator from "../Screens/VictimScreen/victimStackNavigator";
 import ObserverStackNavigator from "../Screens/ObserverScreen/observerStackNavigator";
 import AttackerStackNavigator from "../Screens/AttackerScreen/attackerStackNavigator";
 import TechniquesStackNavigator from "../Screens/TechniquesScreen/stackNavigator";
+
+import translations from "../translations";
 
 import RootNavigator from "./rootStackNavigator";
 
@@ -43,7 +44,7 @@ export default function BottomNavigator() {
         component={HomeScreen}
         options={{
           tabBarVisible: false,
-          tabBarLabel: "Hem",
+          tabBarLabel: translations.t("b_home"),
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={homeIcon}
@@ -57,7 +58,7 @@ export default function BottomNavigator() {
         name="Victim"
         component={VictimStackNavigator}
         options={{
-          tabBarLabel: "Jag har blivit utsatt",
+          tabBarLabel: translations.t("b_victim"),
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={victimIcon}
@@ -71,7 +72,7 @@ export default function BottomNavigator() {
         name="Observer"
         component={ObserverStackNavigator}
         options={{
-          tabBarLabel: "Jag har sett något",
+          tabBarLabel: translations.t("b_observer"),
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={observerIcon}
@@ -85,7 +86,7 @@ export default function BottomNavigator() {
         name="Attacker"
         component={AttackerStackNavigator}
         options={{
-          tabBarLabel: "Jag har utsatt någon",
+          tabBarLabel: translations.t("b_attacker"),
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={attackerIcon}
@@ -99,7 +100,7 @@ export default function BottomNavigator() {
         name="Techniques"
         component={TechniquesStackNavigator}
         options={{
-          tabBarLabel: "Härskartekniker",
+          tabBarLabel: translations.t("b_information"),
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={techniquesIcon}
