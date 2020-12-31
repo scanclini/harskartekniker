@@ -12,22 +12,40 @@ import {
   ThreatOfForceScreen,
 } from "./counterStrategies";
 
+const screens = [
+  { name: "MakingInvisible", screen: MakingInvisibleScreen },
+  { name: "Ridicule", screen: RidiculeScreen },
+  { name: "WithholdInformation", screen: WithholdInformationScreen },
+  { name: "DoubleBind", screen: DoubleBindScreen },
+  { name: "HeapBlame", screen: HeapBlameScreen },
+  { name: "Objectifying", screen: ObjectifyingScreen },
+  { name: "ThreatOfForce", screen: ThreatOfForceScreen },
+];
+
 const Stack = createStackNavigator();
 
 export default function VictimStackNavigator() {
   return (
     <Stack.Navigator initialRouteName="Victim">
-      <Stack.Screen name="Victim" component={VictimScreen} />
-      <Stack.Screen name="MakingInvisible" component={MakingInvisibleScreen} />
-      <Stack.Screen name="Ridicule" component={RidiculeScreen} />
       <Stack.Screen
-        name="WithholdInformation"
-        component={WithholdInformationScreen}
+        key={`v_initial`}
+        name="Victim"
+        component={VictimScreen}
+        options={{ headerShown: false }}
       />
-      <Stack.Screen name="DoubleBind" component={DoubleBindScreen} />
-      <Stack.Screen name="HeapBlame" component={HeapBlameScreen} />
-      <Stack.Screen name="Objectifying" component={ObjectifyingScreen} />
-      <Stack.Screen name="ThreatOfForce" component={ThreatOfForceScreen} />
+      {screens.map((screen) => {
+        return (
+          <Stack.Screen
+            key={`v_${screen.name}`}
+            name={screen.name}
+            component={screen.screen}
+            options={{
+              title: null,
+              headerBackTitleVisible: false,
+            }}
+          />
+        );
+      })}
     </Stack.Navigator>
   );
 }

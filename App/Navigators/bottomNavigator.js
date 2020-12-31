@@ -1,7 +1,15 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { icons, FONTS } from "../Styles/StyleSheet";
+import {
+  icons,
+  FONTS,
+  LABEL_STYLE,
+  ACTIVE_COLOR,
+  ICON_COLOR,
+  BACKGROUND_COLOR,
+} from "../Styles/StyleSheet";
+import { Text } from "react-native-elements";
 
 import HomeScreen from "../Screens/HomeScreen";
 import VictimStackNavigator from "../Screens/VictimScreen/victimStackNavigator";
@@ -21,9 +29,38 @@ const {
   techniquesIcon,
 } = icons;
 
-const ICON_COLOR = "#bbbbbb";
-const ACTIVE_COLOR = "#ff6347";
-const BACKGROUND_COLOR = "white";
+const tabs = [
+  {
+    name: "Home",
+    component: HomeScreen,
+    label: translations.t("b_home"),
+    icon: homeIcon,
+  },
+  {
+    name: "Victim",
+    component: VictimStackNavigator,
+    label: translations.t("b_victim"),
+    icon: victimIcon,
+  },
+  {
+    name: "Observer",
+    component: ObserverStackNavigator,
+    label: translations.t("b_observer"),
+    icon: observerIcon,
+  },
+  {
+    name: "Attacker",
+    component: AttackerStackNavigator,
+    label: translations.t("b_attacker"),
+    icon: attackerIcon,
+  },
+  {
+    name: "Techniques",
+    component: TechniquesStackNavigator,
+    label: translations.t("b_information"),
+    icon: techniquesIcon,
+  },
+];
 
 const Tab = createBottomTabNavigator();
 
@@ -34,86 +71,34 @@ export default function BottomNavigator() {
       tabBarOptions={{
         activeTintColor: ACTIVE_COLOR,
         inactiveTintColor: BACKGROUND_COLOR,
-        labelStyle: {
-          ...FONTS,
-          width: 300,
-        },
         tabStyle: {
           flexGrow: 1,
         },
       }}
     >
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarVisible: false,
-          tabBarLabel: translations.t("b_home"),
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={homeIcon}
-              color={focused ? ACTIVE_COLOR : ICON_COLOR}
-              size={26}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Victim"
-        component={VictimStackNavigator}
-        options={{
-          tabBarLabel: translations.t("b_victim"),
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={victimIcon}
-              color={focused ? ACTIVE_COLOR : ICON_COLOR}
-              size={26}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Observer"
-        component={ObserverStackNavigator}
-        options={{
-          tabBarLabel: translations.t("b_observer"),
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={observerIcon}
-              color={focused ? ACTIVE_COLOR : ICON_COLOR}
-              size={26}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Attacker"
-        component={AttackerStackNavigator}
-        options={{
-          tabBarLabel: translations.t("b_attacker"),
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={attackerIcon}
-              color={focused ? ACTIVE_COLOR : ICON_COLOR}
-              size={26}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Techniques"
-        component={TechniquesStackNavigator}
-        options={{
-          tabBarLabel: translations.t("b_information"),
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={techniquesIcon}
-              color={focused ? ACTIVE_COLOR : ICON_COLOR}
-              size={26}
-            />
-          ),
-        }}
-      />
+      {tabs.map((tab) => {
+        return (
+          <Tab.Screen
+            key={`b_${tab.name}`}
+            name={tab.name}
+            component={tab.component}
+            options={{
+              tabBarVisible: tab.name === "Home" ? false : true,
+              tabBarLabel: ({ focused }) =>
+                focused ? (
+                  <Text style={{ ...LABEL_STYLE }}>{tab.label}</Text>
+                ) : null,
+              tabBarIcon: ({ focused }) => (
+                <MaterialCommunityIcons
+                  name={tab.icon}
+                  color={focused ? ACTIVE_COLOR : ICON_COLOR}
+                  size={26}
+                />
+              ),
+            }}
+          />
+        );
+      })}
     </Tab.Navigator>
   );
 }

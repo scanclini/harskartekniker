@@ -8,6 +8,18 @@ export const FONTS = {
   }),
 };
 
+export const ICON_COLOR = "#bbbbbb";
+export const ACTIVE_COLOR = "#ff6347";
+export const BACKGROUND_COLOR = "white";
+
+export const LABEL_STYLE = {
+  ...FONTS,
+  fontSize: 11,
+  width: 200,
+  textAlign: "center",
+  color: ACTIVE_COLOR,
+};
+
 export const techniqueColors = {
   doubleBind: "#eebb6a",
   ridicule: "#9bbf8a",
