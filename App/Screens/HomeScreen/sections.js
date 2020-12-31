@@ -11,31 +11,31 @@ export const sections = [
   {
     id: 1,
     icon: "hand-left",
-    title: translations.t("victimTitle"),
+    title: "victimTitle",
     path: "Victim",
   },
   {
     id: 2,
     icon: "bell",
-    title: translations.t("attackerTitle"),
+    title: "attackerTitle",
     path: "Attacker",
   },
   {
     id: 3,
     icon: "eye",
-    title: translations.t("observerTitle"),
+    title: "observerTitle",
     path: "Observer",
   },
   {
     id: 4,
     icon: "information-variant",
-    title: translations.t("informationTitle"),
+    title: "informationTitle",
     path: "Techniques",
   },
 ];
 
-export const SectionsList = ({ navigation }) =>
-  sections.map((section) => {
+export const SectionsList = ({ navigation }) => {
+  return sections.map((section) => {
     const { id, path, title, icon } = section;
     return (
       <Card key={id} containerStyle={cardStyles.card}>
@@ -50,8 +50,9 @@ export const SectionsList = ({ navigation }) =>
             size={ICON_SIZE}
             style={cardStyles.icon}
           />
-          <Text style={cardStyles.title}>{title}</Text>
+          <Text style={cardStyles.title}>{translations.t(title)}</Text>
         </TouchableOpacity>
       </Card>
     );
   });
+};

@@ -1,7 +1,7 @@
 export const scenariosEn = {
   o_makingInvisible1: `Someone talked about another person in that person's presence - as if they* weren't even there.`,
   o_makingInvisible2: `Someone discussed issues that affect another person directly in that person's presence - without involving them*.`,
-  Ridicule1: `Someone joked about another person in a way that made them* uncomfortable.`,
+  o_ridicule1: `Someone joked about another person in a way that made them* uncomfortable.`,
   o_ridicule2: `Someone diminished another person’s accomplishment or their* contribution to the team.`,
   o_withholdInformation1: `Another person was not told about a decision, rule, or event that directly affects them*.`,
   o_withholdInformation2: `Someone excluded another person from a meeting or at which decisions, rules, or events that affect them* directly were discussed.`,
@@ -17,21 +17,21 @@ export const scenariosEn = {
   o_threatOfForce3: `Someone used force against another person.`,
 };
 
-export const scenarioSv = {
+export const scenariosSv = {
   o_makingInvisible1: `Två eller flera personer pratade om någon som om hen inte var där.`,
   o_makingInvisible2: `Någon diskuterade frågor som rör någon annan, i dennes närvaro, utan att höra med personen i fråga.`,
   o_ridicule1: `Någon pratade förminskande om någon annan eller skämtade på dennes bekostnad`,
-  o_ridicule2: ``,
-  o_withholdInformation1: ``,
+  o_ridicule2: ` `,
+  o_withholdInformation1: ` `,
   o_withholdInformation2: `Någon av mina kollegor uteslöts från ett möte eller förhindrades från att ta del av information.`,
   o_doubleBind1: ``,
   o_doubleBind2: `Någon gav en kollega skulden för något hen inte hade kontroll över.`,
-  o_doubleBind3: ``,
-  o_heapBlame1: ``,
-  o_heapBlame2: ``,
-  o_objectifying1: ``,
-  o_objectifying2: ``,
-  o_threatOfForce1: ``,
-  o_threatOfForce2: ``,
-  o_threatOfForce3: ``,
+  o_doubleBind3: ` `,
+  o_heapBlame1: ` `,
+  o_heapBlame2: ` `,
+  o_objectifying1: ` `,
+  o_objectifying2: ` `,
+  o_threatOfForce1: ` `,
+  o_threatOfForce2: ` `,
+  o_threatOfForce3: ` `,
 };

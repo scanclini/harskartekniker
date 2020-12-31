@@ -8,6 +8,8 @@ const { victimIcon } = icons;
 
 export function VictimScreen({ navigation }) {
   const scenarioArray = scenarios("victim");
+  console.log("ARRAY", scenarioArray);
+
   return (
     <PageLayout
       icon={victimIcon}

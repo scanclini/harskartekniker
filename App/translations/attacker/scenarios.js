@@ -16,7 +16,7 @@ export const scenariosEn = {
   a_threatOfForce2: `I thought about threatening violence or using force against others.`,
 };
 
-export const scenarioSv = {
+export const scenariosSv = {
   a_makingInvisible1: `Jag och en eller flera personer pratade om någon annan i den personens närvaro - som om personen inte var där.`,
   a_makingInvisible2: `Jag diskuterade frågor som rör någon annan i dennas närvaro utan att involvera personen.`,
   a_ridicule1: `Jag pratade förminskande om någon eller skämtade på personens bekostnad.`,
@@ -25,9 +25,9 @@ export const scenarioSv = {
   a_withholdInformation2: `Jag uteslöt någon från ett formellt eller informellt möte där personen borde ha varit med.`,
   a_doubleBind1: `Jag gav någon skulden för något hen inte hade kontroll över eller fick personen att känna att vad hen än gör så blir det fel.`,
   a_doubleBind2: `Jag kritiserade en annan person för att vara i en privat eller arbetsrelaterad situation som de * inte har någon kontroll över.`,
-  a_doubleBind3: `I pointed out a mistake another person made just to embarrass them*.`,
+  a_doubleBind3: ` `,
   a_heapBlame1: `Jag skuldbelade en annan person för något hen inte kan rå för.`,
-  a_objectifying1: `I shifted the focus from what another person was saying to how they* look or what they* were wearing.`,
+  a_objectifying1: ` `,
   a_objectifying2: `Jag kommenterade en persons utseende eller sexualitet för att försämra hens prestation eller åsikt.`,
   a_objectifying3: `Jag antydde att en annan person använder sitt * utseende eller sin * sexualitet för att få orättvisa fördelar.`,
   a_threatOfForce1: `Jag utsatte någon för våld, hot eller trakasserier.`,

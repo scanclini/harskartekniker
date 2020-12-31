@@ -18,7 +18,7 @@ export const counterStrategiesEn = {
   a_objectifyingSubTitle: "You objectified someone",
   a_objectifyingContent: `In the moment:\n\nIf you are serious and ready to treat the person with respect from now on, apologize without repeating what you said or drawing more attention to the topic. \n\nAfterwards:\nReflect on the following:\n\nWhat important aspects of this person did I detract from by reducing them* to their looks?\n\nWhy am I reacting to this person’s performance or opinion?\n\nWhich power structures does my behavior reinforce?\n\nWhy did I feel comfortable objectifying this person in this setting?`,
   a_threatOfForceTitle: "Stop",
-  a_threatOfForceSubTitle: ``,
+  a_threatOfForceSubTitle: " ",
   a_threatOfForceContent: `Treat the situation with the upmost seriousness. Disengage from the stressful interaction. Leave the room or premises. Thinking about threatening violence or using force are serious red flags. Inform yourself about the resources your organization offers to manage your mental health.\n\nThreatening violence or using force against others means violating their rights. It also means engaging in unlawful behavior. Such behavior falls on the extreme end of the spectrum of threats and physical harassment, and it may be found to be criminal in a court of law.`,
 };
 
