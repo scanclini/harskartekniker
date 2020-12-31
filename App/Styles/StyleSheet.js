@@ -1,8 +1,12 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 
-const IOS_FONT = "Arial";
-const ANDROID_FONT = "Roboto";
+export const FONTS = {
+  ...Platform.select({
+    ios: { fontFamily: "Arial" },
+    android: { fontFamily: "Roboto" },
+  }),
+};
 
 export const techniqueColors = {
   doubleBind: "#eebb6a",
@@ -59,38 +63,26 @@ export const assetStyles = StyleSheet.create({
 
 export const textStyles = StyleSheet.create({
   p: {
-    ...Platform.select({
-      ios: { fontFamily: IOS_FONT },
-      android: { fontFamily: ANDROID_FONT },
-    }),
+    ...FONTS,
     fontSize: 17,
     marginBottom: 20,
   },
   h3: {
     fontSize: 20,
-    ...Platform.select({
-      ios: { fontFamily: IOS_FONT },
-      android: { fontFamily: ANDROID_FONT },
-    }),
+    ...FONTS,
     fontWeight: "bold",
     marginBottom: 20,
   },
   h1: {
     marginLeft: "auto",
     marginRight: "auto",
-    ...Platform.select({
-      ios: { fontFamily: IOS_FONT },
-      android: { fontFamily: ANDROID_FONT },
-    }),
+    ...FONTS,
     fontSize: 40,
     marginBottom: 50,
   },
   headerText: {
     textAlign: "center",
-    ...Platform.select({
-      ios: { fontFamily: IOS_FONT },
-      android: { fontFamily: "Roboto" },
-    }),
+    ...FONTS,
     fontSize: 10,
     marginLeft: 30,
     marginRight: 30,

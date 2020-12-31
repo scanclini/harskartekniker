@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { icons } from "../Styles/StyleSheet";
+import { icons, FONTS } from "../Styles/StyleSheet";
 
 import HomeScreen from "../Screens/HomeScreen";
 import VictimStackNavigator from "../Screens/VictimScreen/victimStackNavigator";
@@ -35,7 +35,11 @@ export default function BottomNavigator() {
         activeTintColor: ACTIVE_COLOR,
         inactiveTintColor: BACKGROUND_COLOR,
         labelStyle: {
-          fontSize: 8,
+          ...FONTS,
+          width: 300,
+        },
+        tabStyle: {
+          flexGrow: 1,
         },
       }}
     >
