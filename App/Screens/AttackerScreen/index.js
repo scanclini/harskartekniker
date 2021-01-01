@@ -1,6 +1,6 @@
 import React from "react";
 import { icons } from "../../Styles/StyleSheet";
-import { PageLayout } from "../_shared/pageLayout";
+import PageLayout from "../_shared/pageLayout";
 import { scenarios } from "../_shared/scenarios";
 import translations from "../../translations";
 

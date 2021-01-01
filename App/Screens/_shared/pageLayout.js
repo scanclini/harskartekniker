@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useIsFocused } from "@react-navigation/native";
 import { Text, View, ScrollView } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import {
@@ -8,13 +9,21 @@ import {
 } from "../../Styles/StyleSheet";
 import { ItemList } from "./itemList";
 
-export const PageLayout = ({ navigation, icon, items, title, content }) => {
+function PageLayout({ navigation, icon, items, title, content }) {
   const { screenContainer, background } = screenStyles;
   const { textContainer, listContainer } = sectionStyles;
   const { h1, h3, p } = textStyles;
+  const scrollRef = useRef();
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo({
+      y: 0,
+    });
+  }, [isFocused]);
 
   return (
-    <ScrollView style={background}>
+    <ScrollView ref={scrollRef} style={background}>
       <View style={screenContainer}>
         <View style={textContainer}>
           <MaterialCommunityIcons style={h1} name={icon} size={50} />
@@ -27,4 +36,6 @@ export const PageLayout = ({ navigation, icon, items, title, content }) => {
       </View>
     </ScrollView>
   );
-};
+}
+
+export default PageLayout;

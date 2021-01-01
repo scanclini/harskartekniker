@@ -21,5 +21,5 @@ export const ItemList = ({ items, navigation }) => {
       </TouchableOpacity>
     );
   });
-  return <View>{itemList}</View>;
+  return itemList;
 };
