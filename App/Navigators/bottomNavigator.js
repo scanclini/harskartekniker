@@ -33,31 +33,31 @@ const tabs = [
   {
     name: "Home",
     component: HomeScreen,
-    label: translations.t("b_home"),
+    label: "b_home",
     icon: homeIcon,
   },
   {
     name: "Victim",
     component: VictimStackNavigator,
-    label: translations.t("b_victim"),
+    label: "b_victim",
     icon: victimIcon,
   },
   {
     name: "Observer",
     component: ObserverStackNavigator,
-    label: translations.t("b_observer"),
+    label: "b_observer",
     icon: observerIcon,
   },
   {
     name: "Attacker",
     component: AttackerStackNavigator,
-    label: translations.t("b_attacker"),
+    label: "b_attacker",
     icon: attackerIcon,
   },
   {
     name: "Techniques",
     component: TechniquesStackNavigator,
-    label: translations.t("b_information"),
+    label: "b_information",
     icon: techniquesIcon,
   },
 ];
@@ -86,7 +86,9 @@ export default function BottomNavigator() {
               tabBarVisible: tab.name === "Home" ? false : true,
               tabBarLabel: ({ focused }) =>
                 focused ? (
-                  <Text style={{ ...LABEL_STYLE }}>{tab.label}</Text>
+                  <Text style={{ ...LABEL_STYLE }}>
+                    {translations.t(tab.label)}
+                  </Text>
                 ) : null,
               tabBarIcon: ({ focused }) => (
                 <MaterialCommunityIcons
