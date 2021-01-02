@@ -1,4 +1,10 @@
-import * as React from "react";
+import React, { useLayoutEffect } from "react";
+import {
+  useIsFocused,
+  getFocusedRouteNameFromRoute,
+  StackActions,
+} from "@react-navigation/native";
+
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { ObserverScreen } from "./";
@@ -24,7 +30,16 @@ const screens = [
 
 const Stack = createStackNavigator();
 
-export default function StackNavigator() {
+export default function StackNavigator({ navigation, route }) {
+  const routeName = getFocusedRouteNameFromRoute(route);
+  const isFocused = useIsFocused();
+
+  useLayoutEffect(() => {
+    const showInitialRoute =
+      isFocused && routeName !== undefined && routeName !== "Observer";
+    showInitialRoute && navigation.dispatch(StackActions.popToTop("Observer"));
+  }, [isFocused]);
+
   return (
     <Stack.Navigator initialRouteName="Observer">
       <Stack.Screen

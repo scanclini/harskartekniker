@@ -1,4 +1,9 @@
-import * as React from "react";
+import React, { useEffect } from "react";
+import {
+  useIsFocused,
+  getFocusedRouteNameFromRoute,
+  StackActions,
+} from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { TechniquesScreen } from "./";
@@ -24,7 +29,17 @@ const screens = [
 
 const Stack = createStackNavigator();
 
-export default function StackNavigator() {
+export default function StackNavigator({ navigation, route }) {
+  const routeName = getFocusedRouteNameFromRoute(route);
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    const showInitialRoute =
+      isFocused && routeName !== undefined && routeName !== "Techniques";
+    showInitialRoute &&
+      navigation.dispatch(StackActions.popToTop("Techniques"));
+  }, [isFocused]);
+
   return (
     <Stack.Navigator initialRouteName="Techniques">
       <Stack.Screen

@@ -1,4 +1,9 @@
-import * as React from "react";
+import React, { useEffect } from "react";
+import {
+  useIsFocused,
+  getFocusedRouteNameFromRoute,
+  StackActions,
+} from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { VictimScreen } from "./";
@@ -24,7 +29,16 @@ const screens = [
 
 const Stack = createStackNavigator();
 
-export default function VictimStackNavigator() {
+export default function StackNavigator({ navigation, route }) {
+  const routeName = getFocusedRouteNameFromRoute(route);
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    const showInitialRoute =
+      isFocused && routeName !== undefined && routeName !== "Victim";
+    showInitialRoute && navigation.dispatch(StackActions.popToTop("Victim"));
+  }, [isFocused]);
+
   return (
     <Stack.Navigator initialRouteName="Victim">
       <Stack.Screen
