@@ -43,7 +43,6 @@ export const SectionsList = ({ navigation }) => {
           onPress={() => {
             navigation.navigate(path);
           }}
-          containerStyle={cardStyles.touchable}
         >
           <MaterialCommunityIcons
             name={icon}

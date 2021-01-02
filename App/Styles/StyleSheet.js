@@ -59,7 +59,7 @@ export const sectionStyles = StyleSheet.create({
   },
   listContainer: {
     marginTop: 10,
-    marginBottom: 10,
+    marginBottom: 50,
     marginLeft: "6%",
     marginRight: "6%",
   },
@@ -113,6 +113,7 @@ export const cardStyles = StyleSheet.create({
   cardsContainer: {
     width: "100%",
     marginTop: 20,
+    marginBottom: 50,
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "flex-start",
