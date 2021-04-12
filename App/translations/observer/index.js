@@ -2,7 +2,7 @@ import { counterStrategiesEn, counterStrategiesSv } from "./counterStrategies";
 import { scenariosEn, scenariosSv } from "./scenarios";
 
 export const observerEn = {
-  o_title: "Confirmation techniques",
+  o_title: "Support Strategies",
   o_text: `Click on the example that comes closest to what you have witnessed and practice intervening against suppression techniques.\n\nWhat happened?`,
   ...scenariosEn,
   ...counterStrategiesEn,

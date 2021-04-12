@@ -2,15 +2,15 @@ import { counterStrategiesEn, counterStrategiesSv } from "./counterStrategies";
 import { scenariosEn, scenariosSv } from "./scenarios";
 
 export const attackerEn = {
-  a_title: "What do I do now?",
-  a_text: `Here you get advice on what you can do if you have been exposed to a ruler technique. Choose the quote from the list that best matches what you have been through.`,
+  a_title: "Accountability Strategies",
+  a_text: `Click on the example that comes closest to how you have behaved to practice holding yourself accountable for using suppression techniques.\n\nWhat happened?`,
   ...scenariosEn,
   ...counterStrategiesEn,
 };
 
 export const attackerSv = {
   a_title: "Vad gör jag nu?",
-  a_text: `Här får du tips på vad du kan göra om har blivit utsatt för en härskarteknik. Välj den sitation i listan som stämmer bäst in på det du varit med om.`,
+  a_text: `Här får du råd och tips på vad du kan göra om du själv använt en härskarteknik. Välj den situation från listan som stämmer bäst.`,
   ...scenariosSv,
   ...counterStrategiesSv,
 };

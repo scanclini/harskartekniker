@@ -11,10 +11,10 @@ export const CounterStrategyLayout = ({ id, title, subTitle, content }) => {
 
   return (
     <ScrollView style={background}>
-      <View style={screenContainer}>
+      <View style={{ ...screenContainer, marginBottom: 20 }}>
         <Text style={h2}>{title}</Text>
         {subTitle && <Text style={h3}>{subTitle}</Text>}
-        <Text style={p}>{content}</Text>
+        <Text style={{ ...p, lineHeight: 20 }}>{content}</Text>
       </View>
       <Image source={data.illustration} />
       <Text style={source}>{data.source}</Text>

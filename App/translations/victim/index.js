@@ -2,7 +2,7 @@ import { counterStrategiesEn, counterStrategiesSv } from "./counterStrategies";
 import { scenariosEn, scenariosSv } from "./scenarios";
 
 export const victimEn = {
-  v_title: "Counter strategies",
+  v_title: "Counter Strategies",
   v_text: `Click on the example that best describes your situation and practice countering suppression techniques.\n\nWhat happened?`,
   ...scenariosEn,
   ...counterStrategiesEn,

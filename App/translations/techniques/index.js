@@ -5,7 +5,7 @@ import {
 import { explanationsEn, explanationsSv } from "./explanations";
 
 export const techniquesEn = {
-  t_title: "What are master supression techniques?",
+  t_title: "What are supression techniques?",
   t_content: `Suppression techniques are methods used to exercise negative power over others. They are interactions in which personal boundaries are crossed to create power imbalances. Some incidents are so subtle that they are hard to recognize and leave us seeking fault with ourselves, while others are so brazen that they leave us too stunned to respond.\n\nThe app focuses on seven suppression techniques:`,
   t_source: `Illustration of {{technique}}. Image by Milla Lepistö.`,
   ...masterSupressionTechniquesEn,
