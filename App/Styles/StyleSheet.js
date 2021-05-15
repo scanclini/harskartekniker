@@ -1,6 +1,11 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 
+const cardShadow = {
+  shadowColor: "#000",
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.25,
+};
 export const FONTS = {
   ...Platform.select({
     ios: { fontFamily: "Arial" },
@@ -57,12 +62,6 @@ export const sectionStyles = StyleSheet.create({
     marginLeft: "10%",
     marginRight: "10%",
   },
-  listContainer: {
-    marginTop: 10,
-    marginBottom: 50,
-    marginLeft: "6%",
-    marginRight: "6%",
-  },
 });
 
 export const assetStyles = StyleSheet.create({
@@ -116,7 +115,7 @@ export const cardStyles = StyleSheet.create({
     marginBottom: 50,
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
   },
   card: {
     width: "48%",
@@ -128,6 +127,7 @@ export const cardStyles = StyleSheet.create({
     marginLeft: 3,
     marginRight: 3,
     marginTop: 6,
+    ...cardShadow,
   },
   title: {
     fontSize: 12,
@@ -145,23 +145,24 @@ export const cardStyles = StyleSheet.create({
 
 export const techniqueCards = StyleSheet.create({
   card: {
-    width: "48%",
+    width: "47%",
     borderRadius: 10,
-    marginBottom: 0,
+    marginBottom: 15,
     marginLeft: 3,
     marginRight: 3,
-    marginTop: 6,
+    marginTop: 0,
+    paddingTop: 0,
+    paddingLeft: 0,
+    paddingRight: 0,
+    ...cardShadow,
   },
   title: {
     fontSize: 14,
     textAlign: "center",
-    paddingTop: 10,
+    margin: 10,
     marginBottom: 0,
   },
   image: {
-    marginTop: 0,
-    marginBottom: 0,
-    width: "100%",
     borderTopRightRadius: 10,
     borderTopLeftRadius: 10,
   },
@@ -179,22 +180,25 @@ export const counterStrategyStyles = StyleSheet.create({
     marginLeft: "10%",
     marginRight: "10%",
     marginTop: 10,
+    marginBottom: 30,
   },
 });
 
 export const scenarioStyles = StyleSheet.create({
   container: {
-    width: "100%",
+    alignItems: "center",
+    width: "80%",
   },
   item: {
-    borderRadius: 10,
-    borderLeftWidth: 10,
-    height: 100,
-    marginLeft: 8,
-    marginRight: 8,
-    marginBottom: 4,
-    marginTop: 4,
+    width: "100%",
     justifyContent: "center",
+    height: 100,
+    borderRadius: 10,
+    marginBottom: 6,
+    margin: 0,
+    marginTop: 6,
+    ...cardShadow,
+    borderLeftWidth: 10,
   },
   titleStyle: {
     fontSize: 15,

@@ -6,6 +6,7 @@ import {
   screenStyles,
   textStyles,
   sectionStyles,
+  scenarioStyles,
 } from "../../Styles/StyleSheet";
 import { ItemList } from "./itemList";
 
@@ -31,8 +32,10 @@ function PageLayout({ navigation, icon, items, title, content }) {
           <Text style={p}>{content}</Text>
         </View>
       </View>
-      <View style={listContainer}>
-        <ItemList items={items} navigation={navigation} />
+      <View style={{ alignItems: "center" }}>
+        <View style={scenarioStyles.container}>
+          <ItemList items={items} navigation={navigation} />
+        </View>
       </View>
     </ScrollView>
   );
